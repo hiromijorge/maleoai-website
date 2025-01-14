@@ -1,0 +1,22 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#ff6b2b",
+        secondary: "#0066ff",
+        dark: "#001428",
+        darker: "#002952",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('/robot-arm.png')",
+      },
+    },
+  },
+  plugins: [],
+};
