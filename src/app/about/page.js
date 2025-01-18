@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <Hero title="Maleo AI" />
+      <Hero title="About  Maleo  AI" />
 
       {/* Company Description */}
       <Description

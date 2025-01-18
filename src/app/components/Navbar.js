@@ -32,14 +32,15 @@ const Navbar = () => {
       id="home-nav"
       className="fixed top-6 left-0 right-0 flex justify-center z-50 px-4 md:px-2"
     >
-      <div className="flex items-center justify-between bg-[#fff] backdrop-blur-sm rounded-lg px-3 py-2.5 gap-5 shadow-lg w-full max-w-[900px]">
-        <Link href="/" className="flex items-center">
+      <div className="flex items-center justify-between bg-[#fff] backdrop-blur-sm rounded-lg px-4 py-3 gap-5 shadow-lg w-full max-w-[950px]">
+        <Link href="/" className="flex items-center  min-w-[75px]">
           <Image
-            src="/assets/main-logo.png"
+            src="/assets/main-logo.svg"
             alt="Maleo AI Logo"
-            width={80}
-            height={80}
-            className="object-contain w-[60px] md:w-[80px]"
+            width={90}
+            height={90}
+            className="object-contain w-[75px] md:w-[75px]"
+            priority
           />
         </Link>
 
@@ -323,7 +324,7 @@ const Navbar = () => {
             href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#FF6B2C] hover:bg-[#FF6B2C]/90 text-white px-4 py-2 rounded-lg text-sm font-light transition-colors"
+            className="bg-[#FF6B2C] hover:bg-[#FF6B2C]/90 text-white px-4 py-2 rounded-lg text-sm font-light transition-colors text-nowrap"
           >
             Book a Session
           </Link>
@@ -334,11 +335,11 @@ const Navbar = () => {
           href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
           target="_blank"
           rel="noopener noreferrer"
-          className={`hidden lg:block ml-1 ${
+          className={`hidden lg:block ml-1 text-nowrap ${
             pathname === "/book"
               ? "bg-[#FF6B2C]"
               : "bg-[#FF6B2C] hover:bg-[#FF6B2C]/90"
-          } text-white px-8 py-2 rounded-lg text-sm font-light transition-colors`}
+          } text-white px-4 py-3 rounded-lg text-sm font-light transition-colors`}
         >
           Book a Session
         </Link>
