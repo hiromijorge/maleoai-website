@@ -12,7 +12,7 @@ const Contact = () => {
     {
       name: "Whatsapp",
       icon: "telephone-fill",
-      link: "https://wa.me/+6287875874496",
+      link: "https://wa.me/+6282121424873",
       className: "col-span-2 lg:col-span-1",
     },
     {

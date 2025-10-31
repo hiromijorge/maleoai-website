@@ -75,17 +75,17 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {[
               {
-                logo: "/assets/syncorp-logo.png",
+                logo: "/assets/companies/Syncorp.svg",
                 name: "SynCorp AI",
-                country: { flag: "🇦🇪", name: "Uni Emirat Arab" },
+                country: { flag: "🇦🇪", name: "United Arab Emirates" },
               },
               {
-                logo: "/assets/wang-logo.png",
+                logo: "/assets/companies/WangDataMarket.svg",
                 name: "Wang",
                 country: { flag: "🇹🇭", name: "Thailand" },
               },
               {
-                logo: "/assets/ttn-logo.png",
+                logo: "/assets/companies/TTN.svg",
                 name: "The Training Notebook",
                 country: { flag: "🇺🇸", name: "United States" },
               },

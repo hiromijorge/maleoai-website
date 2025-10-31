@@ -353,10 +353,10 @@ const TechOverview = ({ centered = false }) => {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <Image
-                  src="/assets/azure.svg"
+                  src="/assets/azure-icon.svg"
                   alt="Azure"
-                  width={80}
-                  height={30}
+                  width={120}
+                  height={60}
                   className="object-contain"
                 />
                 <Image
@@ -466,7 +466,7 @@ const TechOverview = ({ centered = false }) => {
                   className="object-contain"
                 />
                 <Image
-                  src="/assets/rust.svg"
+                  src="/assets/ruby.svg"
                   alt="Rust"
                   width={80}
                   height={30}
