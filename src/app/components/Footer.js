@@ -12,6 +12,7 @@ const Footer = () => {
       path: "/services/remote-tech-talent",
     },
     { name: "AI Training and Workshop", path: "/services/ai-training" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -43,7 +44,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-5">
             <a
-              href="https://wa.me/+6287875874496"
+              href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
               className="text-white hover:text-white"
               target="_blank"
               rel="noopener noreferrer"

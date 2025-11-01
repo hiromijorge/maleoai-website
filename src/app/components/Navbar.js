@@ -10,21 +10,47 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
     setIsProductsOpen(false);
+    setIsLanguageOpen(false);
   };
 
   const toggleProducts = () => {
     setIsProductsOpen(!isProductsOpen);
     setIsServicesOpen(false);
+    setIsLanguageOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    setIsLanguageOpen(!isLanguageOpen);
+    setIsServicesOpen(false);
+    setIsProductsOpen(false);
   };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsServicesOpen(false);
     setIsProductsOpen(false);
+    setIsLanguageOpen(false);
+  };
+
+  // Check if current page is portfolio page
+  const isPortfolioPage =
+    pathname?.startsWith("/portfolio") || pathname?.startsWith("/id/portfolio");
+
+  // Determine current language and toggle URL
+  const isIndonesian = pathname?.startsWith("/id/");
+  const getToggleUrl = () => {
+    if (isIndonesian) {
+      // Switch from ID to EN: remove /id prefix
+      return pathname.replace("/id/", "/");
+    } else {
+      // Switch from EN to ID: add /id prefix
+      return `/id${pathname}`;
+    }
   };
 
   return (
@@ -32,7 +58,7 @@ const Navbar = () => {
       id="home-nav"
       className="fixed top-6 left-0 right-0 flex justify-center z-50 px-4 md:px-2"
     >
-      <div className="flex items-center justify-between bg-[#fff] backdrop-blur-sm rounded-lg px-4 py-3 gap-5 shadow-lg w-full max-w-[950px]">
+      <div className="flex items-center justify-between bg-[#fff] backdrop-blur-sm rounded-lg px-4 py-3 gap-5 shadow-lg w-full max-w-6xl">
         <Link href="/" className="flex items-center  min-w-[75px]">
           <Image
             src="/assets/main-logo.svg"
@@ -188,6 +214,14 @@ const Navbar = () => {
             )}
           </div>
           <Link
+            href="/portfolio"
+            className={`${
+              pathname === "/portfolio" ? "bg-[#FF6B2C]" : "hover:bg-[#FF6B2C]"
+            } text-white px-8 py-2 rounded-lg text-sm font-light transition-colors`}
+          >
+            Portfolio
+          </Link>
+          <Link
             href="/contact"
             className={`text-nowrap ${
               pathname === "/contact" ? "bg-[#FF6B2C]" : "hover:bg-[#FF6B2C]"
@@ -312,6 +346,15 @@ const Navbar = () => {
           </div>
 
           <Link
+            href="/portfolio"
+            className={`${
+              pathname === "/portfolio" ? "bg-[#FF6B2C]" : "hover:bg-[#FF6B2C]"
+            } text-white bg-[#004360] px-4 py-2 rounded-lg text-sm font-light transition-colors mb-2`}
+          >
+            Portfolio
+          </Link>
+
+          <Link
             href="/contact"
             className={`${
               pathname === "/contact" ? "bg-[#FF6B2C]" : "hover:bg-[#FF6B2C]"
@@ -320,8 +363,55 @@ const Navbar = () => {
             Contact Us
           </Link>
 
+          {/* Mobile Language Switcher - Only on Portfolio Pages */}
+          {isPortfolioPage && (
+            <div className="w-full mb-2">
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center justify-between bg-white border-2 border-[#004360] text-[#004360] px-4 py-2 rounded-lg text-sm font-medium w-full"
+              >
+                {isIndonesian ? "Bahasa Indonesia" : "English"}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isLanguageOpen && (
+                <div className="bg-[#E5F4FF] rounded-lg mt-2 p-2">
+                  {isIndonesian ? (
+                    <Link
+                      href={pathname.replace("/id/", "/")}
+                      className="block px-4 py-2 text-[#004360] rounded-lg hover:bg-[#00A0E466] transition-colors"
+                      onClick={() => setIsLanguageOpen(false)}
+                    >
+                      English
+                    </Link>
+                  ) : (
+                    <Link
+                      href={`/id${pathname}`}
+                      className="block px-4 py-2 text-[#004360] rounded-lg hover:bg-[#00A0E466] transition-colors"
+                      onClick={() => setIsLanguageOpen(false)}
+                    >
+                      Bahasa Indonesia
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
           <Link
-            href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+            href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#FF6B2C] hover:bg-[#FF6B2C]/90 text-white px-4 py-2 rounded-lg text-sm font-light transition-colors text-nowrap"
@@ -330,9 +420,56 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Language Switcher - Only on Portfolio Pages */}
+        {isPortfolioPage && (
+          <div className="hidden lg:block relative">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 bg-white border-2 border-[#004360] text-[#004360] px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#004360] hover:text-white transition-colors"
+            >
+              {isIndonesian ? "ID" : "EN"}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3 w-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {isLanguageOpen && (
+              <div className="absolute right-0 mt-2 w-[120px] bg-[#E5F4FF] rounded-2xl shadow-lg z-10 p-2">
+                {isIndonesian ? (
+                  <Link
+                    href={pathname.replace("/id/", "/")}
+                    className="flex items-center gap-3 px-4 py-3 text-[#004360] rounded-xl hover:bg-[#00A0E466] transition-colors"
+                    onClick={() => setIsLanguageOpen(false)}
+                  >
+                    <span className="text-sm font-medium">English</span>
+                  </Link>
+                ) : (
+                  <Link
+                    href={`/id${pathname}`}
+                    className="flex items-center gap-3 px-4 py-3 text-[#004360] rounded-xl hover:bg-[#00A0E466] transition-colors"
+                    onClick={() => setIsLanguageOpen(false)}
+                  >
+                    <span className="text-sm font-medium">Bahasa</span>
+                  </Link>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Desktop Book Session Button */}
         <Link
-          href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+          href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
           target="_blank"
           rel="noopener noreferrer"
           className={`hidden lg:block ml-1 text-nowrap ${
