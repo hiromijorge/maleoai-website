@@ -229,7 +229,7 @@ Amplify Results"
         {/* CTA Button */}
         <div className="w-full flex justify-center mt-12">
           <Link
-            href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+            href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
             className="bg-[#FF761A] text-center text-white text-base md:text-lg font-light px-6 md:px-8 lg:px-12 py-3 md:py-4 rounded-xl hover:bg-blue-600 transition-colors w-full md:w-auto"
             target="_blank"
             rel="noopener noreferrer"

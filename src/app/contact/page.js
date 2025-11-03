@@ -12,7 +12,7 @@ const Contact = () => {
     {
       name: "Whatsapp",
       icon: "telephone-fill",
-      link: "https://wa.me/+6282121424873",
+      link: "https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website.",
       className: "col-span-2 lg:col-span-1",
     },
     {
@@ -52,8 +52,8 @@ const Contact = () => {
             </div>
 
             <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-              Awan Connection Cafe & Coworking Space, Jl. Kayu Manis, Canggu,
-              Kuta Utara, Badung, Bali, Indonesia 80351
+              Awan Connection, Jl. Kayu Manis, Canggu, Kuta Utara, Badung, Bali,
+              Indonesia 80351
             </p>
 
             <iframe

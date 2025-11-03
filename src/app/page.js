@@ -1,7 +1,7 @@
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -55,7 +55,7 @@ export default function Home() {
               </p>
             </div>
             <Link
-              href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+              href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary rounded-xl p-3 md:p-4 font-light text-sm md:text-base w-full md:w-auto"
@@ -195,7 +195,7 @@ export default function Home() {
             ].map((feature, idx) => (
               <div key={idx} className="bg-white text-gray-800 rounded-xl p-8">
                 <div className="text-[#FF6B2C] mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight text-[#FF6B2C]">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -208,7 +208,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <Link
-              href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+              href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FF6B2C] hover:bg-[#FF6B2C]/90 text-white px-8 py-4 rounded-xl text-lg font-light inline-block"
@@ -288,7 +288,7 @@ export default function Home() {
                 </p>
                 <div className="mt-auto pt-10">
                   <Link
-                    href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+                    href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#FF6B2C] bg-white border border-[#FF6B2C] hover:bg-[#FF6B2C] hover:text-white transition-colors duration-200 px-8 py-3 rounded-lg w-full inline-block text-center"
@@ -368,7 +368,7 @@ export default function Home() {
             </p>
 
             <Link
-              href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+              href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="font-light bg-[#00A0E4] hover:bg-[#3B82F6]/90 text-white py-3 md:py-4 px-6 md:px-8 text-base md:text-lg rounded-lg w-fit"

@@ -159,7 +159,7 @@ const WebAppDevelopment = () => {
             Transformation
           </h2>
           <a
-            href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+            href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#3B9BF7] text-white text-base md:text-lg font-light px-8 md:px-12 py-3 md:py-4 rounded-xl hover:bg-blue-600 transition-colors"

@@ -60,7 +60,7 @@ const AiTraining = () => {
         </div>
         <div className="text-center mt-8 sm:mt-10 lg:mt-12">
           <a
-            href="https://cal.com/maleoai/30min?date=2025-01-06&month=2025-01"
+            href="https://wa.me/6282313271338?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20I%20came%20from%20your%20website."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-orange-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-orange-600 transition-colors text-sm sm:text-base"
