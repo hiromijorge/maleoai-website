@@ -1,11 +1,27 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const TechOverview = ({ centered = false }) => {
+const TechOverview = ({ centered = false, language = "en" }) => {
   const scrollContainerRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+
+  // Translation content
+  const content = {
+    en: {
+      title: "Tech Overview",
+      description:
+        "At Maleo AI, we harness the power of the newest and most emerging technologies to develop innovative, efficient, and scalable web and system solutions. Our development approach is rooted in using cutting-edge tools and frameworks that keep us ahead of industry trends.",
+    },
+    id: {
+      title: "Teknologi yang Kami Gunakan",
+      description:
+        "Di Maleo AI, kami memanfaatkan teknologi terbaru dan paling berkembang untuk mengembangkan solusi web dan sistem yang inovatif, efisien, dan skalabel. Pendekatan pengembangan kami berakar pada penggunaan alat dan framework mutakhir yang membuat kami selalu unggul mengikuti tren industri.",
+    },
+  };
+
+  const texts = content[language] || content.en;
 
   const scroll = (direction) => {
     const container = scrollContainerRef.current;
@@ -47,18 +63,14 @@ const TechOverview = ({ centered = false }) => {
             centered ? "text-center" : ""
           }`}
         >
-          Tech Overview
+          {texts.title}
         </h2>
         <p
           className={`text-lg md:text-xl mb-8 md:mb-12 ${
             centered ? "text-center" : ""
           }`}
         >
-          At Maleo AI, we harness the power of the newest and most emerging
-          technologies to develop innovative, efficient, and scalable web and
-          system solutions. Our development approach is rooted in using
-          cutting-edge tools and frameworks that keep us ahead of industry
-          trends.
+          {texts.description}
         </p>
 
         {/* Carousel Navigation */}

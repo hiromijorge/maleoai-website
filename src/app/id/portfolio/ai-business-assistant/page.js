@@ -8,17 +8,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "AI Business Assistant - Intelijen Bisnis Prediktif | Maleo AI",
+  title:
+    "AI Business Assistant - Sistem Pengetahuan AI untuk Pengambil Keputusan | Maleo AI",
   description:
-    "Asisten intelijen bisnis bertenaga AI yang mengubah data terfragmentasi menjadi wawasan yang dapat ditindaklanjuti. Dapatkan peringatan prediktif, analitik otomatis, dan visibilitas real-time di seluruh produksi, logistik, dan penjualan.",
+    "Asisten bisnis AI yang menghubungkan data produksi, logistik, dan penjualan menjadi satu sistem intelijen percakapan. Prediksi masalah sebelum terjadi, percepat pengambilan keputusan hingga 40%, kurangi downtime hingga 25%, dan dapatkan visibilitas transparan lintas departemen.",
   keywords:
-    "intelijen bisnis AI, analitik prediktif, otomasi bisnis, wawasan data, intelijen operasional, analitik AI, optimasi rantai pasokan, asisten bisnis AI",
+    "asisten bisnis AI, intelijen prediktif, analitik real time, keputusan berbasis data, visibilitas lintas departemen, dashboard BI, sistem pengetahuan AI, prediksi maintenance, optimasi rantai pasokan",
   openGraph: {
-    title: "AI Business Assistant - Intelijen Prediktif untuk Operasi",
+    title:
+      "AI Business Assistant - Intelijen Prediktif untuk Operasional yang Lebih Cerdas",
     description:
-      "Buat keputusan berbasis data yang lebih cepat dengan intelijen bisnis bertenaga AI yang menghubungkan semua data operasional Anda.",
+      "Kurangi downtime, optimalkan perencanaan bisnis dengan sistem AI yang mempercepat keputusan hingga 40% dan meningkatkan efisiensi di seluruh rantai pasok.",
     type: "article",
     url: "https://maleoai.com/id/portfolio/ai-business-assistant",
   },
@@ -31,112 +34,75 @@ export const metadata = {
 };
 
 const AIBusinessAssistant = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "Untuk Tim Lapangan dan Operasional",
-      overview:
-        "Bayangkan supervisor Anda tidak perlu lagi keliling cek pekerjaan satu per satu. AI Digital Supervisor hadir lewat WhatsApp, memverifikasi setiap tugas dengan foto dan video real-time. Tim lapangan Anda tetap produktif, Anda tetap tenang.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/id/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "Untuk Perhotelan dan Retail",
-      overview:
-        "Tamu mengirim pesan pukul 2 pagi? Pelanggan tanya stok di Instagram? Tenang. Chatbot AI kami langsung melayani dalam 3 bahasa—bahkan saat tim Anda tidur. Customer service 24/7 tanpa harus bergadang.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/id/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "Untuk Media dan Kepercayaan Publik",
-      overview:
-        "Di era deepfake yang marak, satu video palsu bisa menghancurkan reputasi. Detector kami menganalisis keaslian konten dalam hitungan detik—sebelum viral, sebelum rugi. Lindungi brand Anda dari informasi palsu.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/id/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
-      overview:
-        "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/id/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Review Cerdas dan Kepatuhan",
-      overview:
-        "Review kontrak 100 halaman bisa bikin mata pegal dan pikiran buntu. AI Assistant kami baca, rangkum, dan tandai risiko dalam waktu singkat. Waktu review turun 50%, akurasi naik, dan Anda bisa pulang lebih cepat.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/id/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/id/portfolio/ai-business-assistant";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
   const problems = [
     {
       icon: faExclamationTriangle,
-      title: "Masalah Baru Ketahuan Pas Udah Parah",
+      title: "Masalah Bisnis Tak Terduga",
       description:
-        "Mesin rusak, baru ketahuan pas udah mati. Produksi stop, baru sadar ada yang salah. Data ada, tapi telat dipake.",
+        "Masalah kritis baru terlihat setelah dampaknya muncul karena analisis tidak dilakukan secara real time.",
     },
     {
       icon: faFileLines,
-      title: "Laporan Makan Waktu Berhari-hari",
+      title: "Laporan Manual yang Memakan Waktu",
       description:
-        "Tim habis seminggu bikin report. Pas jadi, datanya udah basi. Keputusan harus cepat, tapi prosesnya lama banget.",
+        "Tim menghabiskan waktu berhari-hari menyusun laporan, padahal keputusan harus dibuat dalam hitungan jam.",
     },
     {
       icon: faChainBroken,
-      title: "Data Berserakan, Gak Nyambung",
+      title: "Data yang Terfragmentasi",
       description:
-        "Data produksi di sini, logistik di sana, sales di Excel lain. Mau liat big picture? Impossible. Semuanya terpisah-pisah.",
+        "Saat masalah mendesak muncul, data yang tersebar di berbagai departemen membuat keputusan terlambat dan bisnis berisiko kehilangan kendali.",
     },
   ];
 
   const solutions = [
     {
-      title: "Dikasih Tau Sebelum Masalah Terjadi",
+      title: "Peringatan Prediktif",
       description:
-        "AI prediksi masalah sebelum kejadian. Mesin mau rusak? Anda udah dikasih alert duluan. Bisa cegah sebelum produksi berhenti total.",
+        "Terima peringatan sebelum masalah terjadi, memungkinkan Anda mengambil tindakan proaktif daripada bereaksi setelah kejadian.",
     },
     {
-      title: "Tanya Apa Aja, Langsung Dijawab",
+      title: "Analitik Otomatis dalam Bahasa yang Mudah Dipahami",
       description:
-        '"Kenapa sales turun minggu ini?" "Kapan harus restock?" Tanya pake bahasa sehari-hari, dijawab jelas tanpa istilah teknis aneh.',
+        "Ajukan pertanyaan kompleks dan dapatkan jawaban yang jelas dan kontekstual secara instan.",
     },
     {
-      title: "Semua Data Jadi Satu, Real-Time",
+      title: "Visibilitas Lintas Departemen Secara Real Time",
       description:
-        "Dashboard yang nyatuin produksi, logistik, sales dalam satu layar. AI-nya belajar dari pola bisnis Anda dan kasih rekomendasi yang relevan.",
+        "Dashboard terpadu yang mempelajari pola bisnis Anda dan memberikan rekomendasi cerdas yang dapat ditindaklanjuti.",
     },
   ];
 
   return (
     <div className="min-h-screen">
-      <Hero title="AI Business Assistant" />
+      <Hero
+        title="Asisten Bisnis AI"
+        subtitle="Sistem Pengetahuan AI untuk Pengambil Keputusan Bisnis"
+      />
 
       <Description
-        title="Data Anda Sebetulnya Udah Ngomong—Tapi Siapa yang Dengerin?"
-        description="Sensor, produksi, logistik—semuanya ngasih data. Tapi angka-angka itu gak ada artinya kalau gak bisa dipakai buat ambil keputusan cepat."
-        subdescription="AI Business Assistant nyambungin semua data yang tadinya terpisah-pisah—dari produksi, logistik, sampai sales—jadi satu dashboard yang bisa diajak ngobrol. Mau tanya trend bulan ini? Mau prediksi masalah sebelum kejadian? Tinggal tanya, langsung dijawab dalam bahasa manusia. Bukan jargon teknis yang bikin pusing. Hasil? Keputusan lebih cepat, downtime turun, dan bisnis jalan lebih smooth."
+        title="Intelijen Prediktif untuk Operasional Anda"
+        description="Kurangi downtime, optimalkan perencanaan bisnis dan buat keputusan lebih cepat berbasis data di seluruh rantai pasok bisnis Anda."
+        subdescription="Dengan menghubungkan data dari produksi, logistik, dan penjualan ke dalam satu antarmuka percakapan, asisten AI ini berfungsi layaknya analis bisnis pribadi yang selalu siap membantu. Ia dapat membuat laporan khusus sesuai permintaan, mendeteksi tren sejak dini sebelum menjadi masalah, dan memberikan rekomendasi strategis agar bisnis Anda tetap lincah, kompetitif, dan selalu mengambil keputusan yang tepat."
       />
 
       {/* Problem Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Data Banyak, Insight Nol
+            Tantangan yang Dihadapi
           </h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#FF6B2C]">
+            Informasi Datang Terlambat
+          </h3>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Bisnis kumpulin data buanyak banget. Tapi pas butuh buat ambil
-            keputusan? Lama, ribet, dan sering udah telat.
+            Bisnis mengumpulkan data dalam jumlah besar, tetapi siklus keputusan
+            yang lambat dan informasi yang terputus memakan waktu dan biaya.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {problems.map((problem, index) => (
@@ -160,11 +126,11 @@ const AIBusinessAssistant = () => {
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          AI yang Bisa Ngasih Tau Sebelum Kejadian
+          Bagaimana AI Business Assistant Mengatasi Ini
         </h2>
-        <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Gak cuma ngelapor apa yang udah terjadi. AI ini prediksi apa yang
-          bakal terjadi—biar Anda bisa gerak duluan.
+        <p className="text-gray-600 text-lg mb-4 text-center max-w-3xl mx-auto">
+          Sistem ini menyatukan semua data Anda dari produksi, logistik,
+          penjualan, dan operasi ke dalam satu lapisan intelijen percakapan.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -192,14 +158,14 @@ const AIBusinessAssistant = () => {
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-8">
-            Bukan Dashboard Biasa yang Cuma Nunjukin Grafik
+            Apa yang Membuatnya Berbeda
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Ini asisten pintar yang belajar dari history bisnis Anda. Dia
-            nyambungin data dari berbagai departemen dan ngasih jawaban yang
-            bisa langsung dieksekusi. Gak cuma nunjukin grafik naik-turun, tapi
-            ngasih tau "ini masalahnya, ini solusinya" dalam bahasa yang Anda
-            paham.
+            Tidak seperti dashboard BI tradisional, asisten ini memahami
+            konteks. Tanyakan, "Tampilkan varians kinerja untuk Q2 dan prediksi
+            risiko kuartal berikutnya," dan sistem akan merespons dengan data
+            dan alasan di baliknya. Asisten ini berbicara dalam bahasa industri
+            Anda dan terus belajar dari pola historis Anda.
           </p>
         </div>
       </div>
@@ -208,7 +174,7 @@ const AIBusinessAssistant = () => {
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 md:mb-16">
-            Lihat Solusi Kami yang Lain
+            Karya Lainnya dari Kami
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {otherPortfolios.map((portfolio, idx) => (
@@ -253,17 +219,17 @@ const AIBusinessAssistant = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-              Data Anda = Senjata Rahasia Anda
+              Hadirkan Intelijen Prediktif ke Operasional Anda
             </h2>
           </div>
 
           <div className="flex flex-col justify-center">
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-              Perusahaan manufacturing dan logistik yang maju udah pakai AI
-              prediktif buat unggul dari kompetitor. Mereka gak nunggu laporan
-              bulanan—mereka ambil action berdasarkan alert real-time. Kalau
-              data Anda cuma numpuk tanpa dipakai, kompetitor yang bakal pakai
-              duluan buat ngalahin Anda.
+              Kompetitor Anda membuat keputusan lebih cepat dengan wawasan
+              bertenaga AI sementara Anda masih menunggu laporan minggu lalu.
+              Perusahaan terkemuka telah mengurangi downtime sebesar 25% dan
+              mempercepat pengambilan keputusan sebesar 40%. Pertanyaannya bukan
+              apakah harus mengadopsi AI, tetapi apakah Anda mampu menunggu.
             </p>
 
             <Link
@@ -272,7 +238,7 @@ const AIBusinessAssistant = () => {
               rel="noopener noreferrer"
               className="font-light bg-[#00A0E4] hover:bg-[#3B82F6]/90 text-white py-3 md:py-4 px-6 md:px-8 text-base md:text-lg rounded-lg w-fit"
             >
-              Konsultasi Gratis
+              Jadwalkan Konsultasi
             </Link>
           </div>
         </div>

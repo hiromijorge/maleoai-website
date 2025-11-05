@@ -8,18 +8,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
   title:
-    "Maleo AI Deepfake Detector - Video Authenticity Verification | Maleo AI",
+    "Maleo AI Deepfake Detector - AI-Generated Media Verification | Maleo AI",
   description:
-    "Enterprise-grade deepfake detection platform that analyzes voice, image, and video content for authenticity. Protect your brand from AI-generated misinformation with advanced deep learning models.",
+    "Stay protected from hoaxes and misleading information. Verify content and detect AI-generated media before it spreads false information with advanced deep learning analysis of voice, image, and video authenticity.",
   keywords:
-    "deepfake detection, video verification, synthetic media detection, AI authenticity, misinformation prevention, media verification, deepfake AI, forensic analysis",
+    "deepfake detection, AI-generated media, hoax detection, video verification, synthetic media detection, AI authenticity, misinformation prevention, media verification, content verification, forensic analysis, public trust, enterprise security",
   openGraph: {
-    title: "Maleo AI Deepfake Detector - Detect Fakes Before They Spread",
+    title: "Maleo AI Deepfake Detector - Verify Content Before It Spreads",
     description:
-      "Verify video authenticity with enterprise-grade AI detection. Protect your brand and community from deepfakes.",
+      "Protect your brand from AI-generated hoaxes and misleading information. Real-time AI content checker with multi-modal analysis and privacy-first architecture for public and enterprise use.",
     type: "article",
     url: "https://maleoai.com/portfolio/maleo-ai-deepfake-detector",
   },
@@ -32,51 +33,8 @@ export const metadata = {
 };
 
 const MaleoAIDeepfakeDetector = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "For Field and Operational Teams",
-      overview:
-        "A WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "For Hospitality and Retail",
-      overview:
-        "An AI chatbot that manages customer inquiries, bookings, and FAQs in English, Chinese, and Indonesian across WhatsApp, Instagram, and your website. Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "For Media and Public Trust",
-      overview:
-        "A deepfake detection tool that analyzes voice, image, and video content for authenticity — built for media, education, and cybersecurity applications. Protect your brand and community from misinformation. Verify content before it spreads.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Data Insight and Predictive Operations",
-      overview:
-        "A specialized AI system that consolidates sensor, production, and logistics data into actionable insights. Reduce downtime, optimize maintenance cycles, and make faster, data-driven decisions across the supply chain.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Smart Review and Compliance",
-      overview:
-        "An AI-powered assistant that reviews, summarizes, and cross-checks legal or contract documents to accelerate due diligence and compliance reviews. Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/portfolio/maleo-ai-deepfake-detector";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
@@ -103,19 +61,19 @@ const MaleoAIDeepfakeDetector = () => {
 
   const solutions = [
     {
-      title: "Real-Time Detection API",
+      title: "Real Time AI Content Checker",
       description:
-        "Integrate deepfake detection into your workflow via API or upload directly to our secure dashboard.",
+        "Quickly identify AI generated images, videos, and audio with high accuracy.",
     },
     {
-      title: "Multi-Modal Analysis",
+      title: "Multi Modal Analysis",
       description:
-        "Verify authenticity across voice, image, and video with advanced AI pattern recognition.",
+        "Check authenticity across voice, image, and video using advanced AI pattern recognition.",
     },
     {
-      title: "Privacy-First Architecture",
+      title: "Privacy First Architecture",
       description:
-        "Data is analyzed locally or securely in the cloud with full transparency and audit logs.",
+        "All data is processed either locally or securely in the cloud, with full transparency and audit logs.",
     },
   ];
 
@@ -124,9 +82,9 @@ const MaleoAIDeepfakeDetector = () => {
       <Hero title="Maleo AI Deepfake Detector" />
 
       <Description
-        title="Detect What's Fake Before It Spreads."
-        description="Protect your brand and community from misinformation. Verify content before it spreads."
-        subdescription="Leveraging state-of-the-art deep learning models trained on millions of synthetic media samples, Maleo AI analyzes subtle visual artifacts, audio inconsistencies, and temporal anomalies invisible to the human eye. Delivering confidence scores and detailed forensic reports within seconds, it serves as your first line of defense against AI-generated disinformation and manipulation."
+        title="Stay Protected from Hoaxes and Misleading Information"
+        description="Maleo AI Deepfake detector helps you verify content and detect AI generated media before it spreads false information."
+        subdescription="Using advanced deep learning models trained on millions of synthetic samples, Maleo AI Deepfake detector analyzes subtle visual clues, audio inconsistencies, and timing anomalies that are impossible to catch with the human eye. Within seconds, it provides a confidence score and a detailed forensic report, giving you a reliable first line of defense against AI driven disinformation and manipulation."
       />
 
       {/* Problem Section */}
@@ -161,12 +119,11 @@ const MaleoAIDeepfakeDetector = () => {
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          How Maleo Deepfake Detector Solves This
+          How Maleo Deepfake Detector works
         </h2>
         <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Verify authenticity across audio, image, and video — identifying
-          synthetic patterns invisible to the human eye and delivering an
-          explainable authenticity score.
+          Verify authenticity across audio, image, and video with advanced AI
+          analysis.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -193,7 +150,7 @@ const MaleoAIDeepfakeDetector = () => {
       {/* Demo Video Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 text-center">
-          See It In Action
+          Product Demo
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
@@ -216,10 +173,9 @@ const MaleoAIDeepfakeDetector = () => {
             What Makes It Different
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Built for public institutions, media outlets, and security teams —
-            not consumer gimmicks. You get compliance-grade transparency logs
-            for audits, explainable AI decisions, and enterprise-level accuracy
-            that meets regulatory standards.
+            Designed for both public and enterprise use, Maleo AI provides
+            transparent and explainable AI decisions with compliance grade
+            accuracy that meets regulatory standards.
           </p>
         </div>
       </div>

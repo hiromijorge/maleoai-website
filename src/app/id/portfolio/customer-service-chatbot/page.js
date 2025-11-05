@@ -5,20 +5,21 @@ import {
   faCommentSlash,
   faLanguage,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "Customer Service Chatbot - Asisten AI Multibahasa | Maleo AI",
+  title: "Maleo AI Chatbot - Layanan Pelanggan 24 Jam Multibahasa | Maleo AI",
   description:
-    "Chatbot AI yang mengelola pertanyaan pelanggan 24/7 dalam bahasa Inggris, Mandarin, dan Indonesia melalui WhatsApp, Instagram, dan web. Sempurna untuk bisnis perhotelan dan retail.",
+    "Asisten chat khusus yang dirancang sesuai kebutuhan bisnis Anda. Menjawab pertanyaan, menangani reservasi, mengirim pesan tindak lanjut, dan melakukan upselling dalam Bahasa Indonesia, Inggris, dan Mandarin melalui WhatsApp, Instagram, dan web.",
   keywords:
-    "chatbot AI, otomasi layanan pelanggan, chatbot multibahasa, bot WhatsApp, chatbot perhotelan, otomasi retail, dukungan pelanggan 24/7, otomasi pemesanan",
+    "chatbot AI custom, asisten chat multibahasa, pesan tindak lanjut otomatis, upselling AI, chatbot WhatsApp, chatbot perhotelan, chatbot retail, layanan pelanggan 24/7, update knowledge base",
   openGraph: {
-    title: "Customer Service Chatbot - Dukungan Multibahasa 24/7",
+    title:
+      "Maleo AI Chatbot - Asisten Chat Custom dengan Follow-up dan Upselling",
     description:
-      "Berikan balasan sempurna sepanjang waktu dalam bahasa Inggris, Mandarin, dan Indonesia dengan layanan pelanggan bertenaga AI.",
+      "Layanan pelanggan 24 jam dengan kemampuan follow-up dan upselling. Dirancang khusus untuk kebutuhan bisnis Anda dengan pelatihan mandiri untuk admin.",
     type: "article",
     url: "https://maleoai.com/id/portfolio/customer-service-chatbot",
   },
@@ -31,112 +32,69 @@ export const metadata = {
 };
 
 const CustomerServiceChatbot = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "Untuk Tim Lapangan dan Operasional",
-      overview:
-        "Bayangkan supervisor Anda tidak perlu lagi keliling cek pekerjaan satu per satu. AI Digital Supervisor hadir lewat WhatsApp, memverifikasi setiap tugas dengan foto dan video real-time. Tim lapangan Anda tetap produktif, Anda tetap tenang.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/id/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "Untuk Perhotelan dan Retail",
-      overview:
-        "Tamu mengirim pesan pukul 2 pagi? Pelanggan tanya stok di Instagram? Tenang. Chatbot AI kami langsung melayani dalam 3 bahasa—bahkan saat tim Anda tidur. Customer service 24/7 tanpa harus bergadang.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/id/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "Untuk Media dan Kepercayaan Publik",
-      overview:
-        "Di era deepfake yang marak, satu video palsu bisa menghancurkan reputasi. Detector kami menganalisis keaslian konten dalam hitungan detik—sebelum viral, sebelum rugi. Lindungi brand Anda dari informasi palsu.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/id/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
-      overview:
-        "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/id/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Review Cerdas dan Kepatuhan",
-      overview:
-        "Review kontrak 100 halaman bisa bikin mata pegal dan pikiran buntu. AI Assistant kami baca, rangkum, dan tandai risiko dalam waktu singkat. Waktu review turun 50%, akurasi naik, dan Anda bisa pulang lebih cepat.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/id/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/id/portfolio/customer-service-chatbot";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
   const problems = [
     {
       icon: faCommentSlash,
-      title: "Chat Gak Kebales = Duit Hilang",
+      title: "Respons Instan Tanpa Waktu Tunggu",
       description:
-        "Customer chat pagi, balesnya siang. Eh, dia udah booking di kompetitor. Kesel kan?",
+        "Menjawab pertanyaan pelanggan secara otomatis, kapan pun, tanpa ada pesan yang terlewat.",
     },
     {
       icon: faLanguage,
-      title: "Bingung Ngurusin Banyak Bahasa",
+      title: "Menangani Ribuan Percakapan Sekaligus",
       description:
-        "Tamu Mandarin chat, staf bingung. Turis Inggris nanya, lama translatenya. Ujung-ujungnya pelayanan jadi lambat.",
+        "Mengelola interaksi tak terbatas di WhatsApp, Instagram, dan situs web secara bersamaan.",
     },
     {
       icon: faArrowsRotate,
-      title: "Pertanyaan Sama Terus, Capek",
+      title: "Membebaskan Tim dari Pekerjaan Rutin",
       description:
-        '"Jam check-in berapa?" "Boleh bawa hewan?" "Ada WiFi?" Ditanya 50 kali sehari, tim jadi robot.',
+        "Tim Anda bisa fokus pada layanan bernilai tinggi, sementara AI menangani pertanyaan berulang.",
     },
   ];
 
   const solutions = [
     {
-      title: "Balas Chat Detik Itu Juga",
+      title: "Respons Instan Tanpa Waktu Tunggu",
       description:
-        "Customer chat, langsung dijawab. Gak peduli jam berapa. Gak ada lagi pesan yang kelewat.",
+        "Menjawab pertanyaan pelanggan secara otomatis, kapan pun, tanpa ada pesan yang terlewat.",
     },
     {
-      title: "Urus Ribuan Chat Sekaligus",
+      title: "Menangani Ribuan Percakapan Sekaligus",
       description:
-        "WhatsApp, Instagram, website—semua platform langsung dijawab. Berapa banyak pun chatnya, AI gak kewalahan.",
+        "Mengelola interaksi tak terbatas di WhatsApp, Instagram, dan situs web secara bersamaan.",
     },
     {
-      title: "Tim Fokus ke yang Penting",
+      title: "Membebaskan Tim dari Pekerjaan Rutin",
       description:
-        "Pertanyaan standar? AI yang jawab. Tim Anda bisa fokus kasih pengalaman personal ke tamu yang butuh perhatian khusus.",
+        "Tim Anda bisa fokus pada layanan bernilai tinggi, sementara AI menangani pertanyaan berulang.",
     },
   ];
 
   return (
     <div className="min-h-screen">
-      <Hero title="Customer Service Chatbot" />
+      <Hero title="Maleo AI Chatbot" />
 
       <Description
-        title="Customer Service yang Gak Pernah Tidur"
-        description="Tamu chat jam 2 pagi? Pelanggan tanya stok saat weekend? Chatbot AI kami jawab langsung—dalam 3 bahasa."
-        subdescription="Bayangin: tamu Mandarin tanya kamar, langsung dijawab bahasa Mandarin. Customer Indonesia chat di Instagram, langsung dibalas Bahasa Indonesia. Semua otomatis, semua natural, semua cepat. Tim Anda gak perlu begadang, gak perlu stress mikirin inbox. Fokus kasih pengalaman terbaik ke tamu yang datang langsung aja."
+        title="Layanan Pelanggan 24 Jam dalam Bahasa Inggris, Mandarin, dan Indonesia"
+        description="Berikan pelayanan cepat dan konsisten kapan pun tanpa jeda, agar tim Anda bisa fokus pada tamu bukan membalas semua pesan di inbox."
+        subdescription="Asisten chat kami dirancang khusus sesuai kebutuhan bisnis Anda. Ia dapat menjawab pertanyaan, membagikan informasi, dan menangani permintaan reservasi dengan alur percakapan yang alami. Selain itu, asisten ini juga bisa mengirim pesan tindak lanjut, mempromosikan penawaran, dan melakukan upselling kepada calon pelanggan dalam berbagai bahasa sementara tim Anda tetap fokus memberikan pengalaman langsung yang berkesan."
       />
 
       {/* Problem Section */}
-      <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
+      {/* <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Handle Banyak Customer Itu Exhausting
+            Tantangan di Layanan Pelanggan Skala Besar
           </h2>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Apalagi kalau harus jawab WhatsApp, Instagram, website, dalam 3
-            bahasa berbeda. Mental drop.
+            Mengelola komunikasi lintas bahasa dan platform bisa sangat
+            melelahkan.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {problems.map((problem, index) => (
@@ -155,16 +113,16 @@ const CustomerServiceChatbot = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          Solusinya? AI yang Bisa Ngobrol Kayak Manusia
+          Solusi dari Maleo AI Chatbot
         </h2>
         <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Cepat, ramah, ngerti context, bisa 3 bahasa. Di platform mana pun
-          customer Anda nongkrong.
+          Asisten chat yang dirancang khusus sesuai kebutuhan bisnis Anda dengan
+          kemampuan follow-up dan upselling.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -192,14 +150,22 @@ const CustomerServiceChatbot = () => {
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-8">
-            Bukan Chatbot Robot Kaku Biasa
+            Keunggulan yang Membedakan
           </h2>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-4">
+            Ini bukan chatbot generik. Sistem ini dilatih khusus untuk industri
+            Anda, memahami konteks dan gaya komunikasi, serta mampu berganti
+            bahasa dengan mulus antara Inggris, Mandarin, dan Bahasa Indonesia.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-4">
+            Tujuannya bukan menggantikan tim layanan pelanggan Anda, tapi
+            memperluas jangkauan mereka agar bisnis bisa tetap memberikan
+            dukungan penuh 24 jam tanpa harus menambah staf.
+          </p>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Chatbot kami dilatih khusus buat industri hotel dan retail. Ngerti
-            tone yang pas, gak jawab kayak robot. Switch bahasa juga mulus—dari
-            Inggris ke Mandarin ke Indonesia tanpa aneh. Plus, bisa disesuaikan
-            sama gaya brand Anda. Jadi setiap interaksi tetap kerasa personal
-            dan profesional.
+            Kami juga melatih admin Anda untuk memperbarui basis pengetahuan
+            secara mandiri, dan tim kami selalu siap mendampingi agar AI tetap
+            akurat dan andal.
           </p>
         </div>
       </div>

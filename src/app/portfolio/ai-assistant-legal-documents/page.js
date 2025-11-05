@@ -8,17 +8,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "AI Legal Document Assistant - Contract Review Automation | Maleo AI",
+  title: "AI Legal Document Assistant - AI-Assisted Contract Review | Maleo AI",
   description:
-    "Intelligent AI assistant that streamlines contract review, comparison, and risk analysis. Cut legal review time by 50% with automated clause extraction, risk tagging, and compliance checking.",
+    "Intelligent legal document checker that helps analyze contracts, reduce review time, and ensure regulatory alignment. AI assists with clause extraction, risk tagging, and version comparison while keeping humans in control of final decisions.",
   keywords:
-    "AI legal assistant, contract review automation, legal document analysis, AI contract comparison, compliance automation, legal tech, document AI, contract intelligence",
+    "AI legal assistant, contract review automation, legal document analysis, AI contract comparison, compliance support, legal tech, document AI, contract intelligence, human oversight, audit ready compliance, clause extraction, risk analysis",
   openGraph: {
-    title: "AI Legal Document Assistant - Smart Contract Review",
+    title: "AI Legal Document Assistant - Faster Review with Human Oversight",
     description:
-      "Automate legal document review with AI-powered clause extraction, risk analysis, and version comparison.",
+      "AI-assisted legal document review that helps teams work significantly faster while maintaining human control. Cut review time by 50%, reduce errors, and ensure audit-ready compliance.",
     type: "article",
     url: "https://maleoai.com/portfolio/ai-assistant-legal-documents",
   },
@@ -31,51 +32,8 @@ export const metadata = {
 };
 
 const AIAssistantLegalDocuments = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "For Field and Operational Teams",
-      overview:
-        "A WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "For Hospitality and Retail",
-      overview:
-        "An AI chatbot that manages customer inquiries, bookings, and FAQs in English, Chinese, and Indonesian across WhatsApp, Instagram, and your website. Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "For Media and Public Trust",
-      overview:
-        "A deepfake detection tool that analyzes voice, image, and video content for authenticity — built for media, education, and cybersecurity applications. Protect your brand and community from misinformation. Verify content before it spreads.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Data Insight and Predictive Operations",
-      overview:
-        "A specialized AI system that consolidates sensor, production, and logistics data into actionable insights. Reduce downtime, optimize maintenance cycles, and make faster, data-driven decisions across the supply chain.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Smart Review and Compliance",
-      overview:
-        "An AI-powered assistant that reviews, summarizes, and cross-checks legal or contract documents to accelerate due diligence and compliance reviews. Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/portfolio/ai-assistant-legal-documents";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
@@ -84,37 +42,37 @@ const AIAssistantLegalDocuments = () => {
       icon: faCopy,
       title: "Inconsistent Document Versions",
       description:
-        "Multiple versions floating around create confusion and compliance risks in critical deals.",
+        "Multiple versions circulating at once create confusion and raise compliance risks.",
     },
     {
       icon: faEyeSlash,
       title: "Hidden Risk Clauses",
       description:
-        "Important red flags buried deep in lengthy PDFs go unnoticed until it's too late.",
+        "Important red flags buried deep in lengthy documents often go unnoticed until it is too late.",
     },
     {
       icon: faCodeCompare,
       title: "Manual Comparison Under Pressure",
       description:
-        "Teams waste hours comparing contracts line-by-line while deadlines loom.",
+        "Teams spend hours comparing contracts line by line while deadlines close in.",
     },
   ];
 
   const solutions = [
     {
-      title: "Clause Extraction & Risk Tagging",
+      title: "Clause Extraction and Risk Tagging",
       description:
-        "Automatically identify and flag high-risk clauses, liabilities, and non-standard terms.",
+        "Automatically identifies and flags risky clauses, liabilities, and unusual terms for faster validation.",
     },
     {
-      title: "Contract Comparison (Old vs. New)",
+      title: "Contract Comparison (Old vs New)",
       description:
-        "Instantly compare versions and highlight changes, deletions, and additions with context.",
+        "Quickly compares versions and highlights changes, deletions, and additions with full context.",
     },
     {
-      title: "Automatic Summary & Red-Flag Highlights",
+      title: "Automatic Summaries and Red Flag Highlights",
       description:
-        "Get executive summaries with critical issues highlighted for immediate action.",
+        "Generates concise summaries with critical issues clearly highlighted for human review.",
     },
   ];
 
@@ -123,20 +81,23 @@ const AIAssistantLegalDocuments = () => {
       <Hero title="AI Assistant for Legal Documents" />
 
       <Description
-        title="Your contracts deserve more than copy-paste reviews."
-        description="Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation."
-        subdescription="Powered by advanced natural language processing trained on legal terminology and contract structures, this AI assistant instantly extracts key clauses, highlights potential risks, compares document versions side-by-side, and ensures consistency across your contract portfolio. It transforms days of manual review into minutes of intelligent analysis, giving your legal team the confidence to move fast without missing critical details."
+        title="Imagine having an intelligent legal document checker that helps you analyze every contract, reduce review time, and ensure documents align with the right regulations."
+        description="This assistant helps your legal team work significantly faster, reduce human error, and maintain audit ready compliance across all documents. It supports human reviewers, helping them quickly verify hundreds of clauses and paraphrases that would otherwise take days to check manually."
+        subdescription="Powered by advanced natural language processing trained on legal terminology and contract structures, the AI extracts key clauses, flags potential risks, compares document versions side by side, and provides consistent insights across your contract portfolio. It transforms slow, repetitive review work into fast, structured analysis while keeping humans in control of every final decision."
       />
 
       {/* Problem Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Legal Teams Lose Hours to Repetitive Checks
+            The Problems
           </h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#FF6B2C]">
+            Legal Teams Lose Hours to Repetitive Checks
+          </h3>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Manual processes under pressure lead to missed risks and compliance
-            gaps.
+            Manual reviews under tight deadlines often lead to missed risks and
+            compliance gaps.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {problems.map((problem, index) => (
@@ -160,11 +121,14 @@ const AIAssistantLegalDocuments = () => {
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          How Legal AI Assistant Solves This
+          How the Legal AI Assistant Solves This
         </h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#FF6B2C]">
+          Smart Reading and Instant Summaries
+        </h3>
         <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Read, summarize, and flag issues instantly — like a tireless paralegal
-          working 24/7.
+          Reads, summarizes, and flags issues in seconds, giving your team a
+          clear starting point for review.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -195,11 +159,21 @@ const AIAssistantLegalDocuments = () => {
             What Makes It Different
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Built for regulated industries — your documents stay private, never
-            exported externally. All processing happens in secure, compliant
-            environments with full audit trails. Unlike generic document tools,
-            this understands legal terminology and industry-specific contract
-            structures.
+            Built for legal and regulated industries, this AI assistant helps
+            teams work faster without sacrificing accuracy. It assists with
+            compliance but cannot guarantee it, as legal review always requires
+            human judgment.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mt-4">
+            It does not replace lawyers or paralegals; it helps them focus on
+            high value decisions while the AI handles the repetitive analysis.
+            Documents can be processed locally or securely in a private cloud
+            environment, ensuring data control and privacy.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mt-4">
+            In short, it significantly reduces review time, cuts down on errors,
+            and gives your team the clarity to make faster, more confident
+            decisions without overpromising or giving up human oversight.
           </p>
         </div>
       </div>
