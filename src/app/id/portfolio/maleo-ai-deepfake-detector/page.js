@@ -8,17 +8,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "Maleo AI Deepfake Detector - Verifikasi Keaslian Video | Maleo AI",
+  title:
+    "Maleo AI Deepfake Detector - Perlindungan dari Hoaks dan Media Palsu | Maleo AI",
   description:
-    "Platform deteksi deepfake tingkat enterprise yang menganalisis keaslian konten suara, gambar, dan video. Lindungi brand Anda dari misinformasi yang dihasilkan AI dengan model deep learning canggih.",
+    "Sistem AI yang memeriksa keaslian suara, gambar, dan video untuk melindungi dari konten manipulatif dan hoaks. Dengan teknologi deep learning yang dilatih dari jutaan sampel sintetis untuk deteksi anomali visual dan audio.",
   keywords:
-    "deteksi deepfake, verifikasi video, deteksi media sintetis, keaslian AI, pencegahan misinformasi, verifikasi media, AI deepfake, analisis forensik",
+    "deteksi deepfake, verifikasi konten, deteksi hoaks, media buatan AI, keamanan informasi, kepercayaan publik, analisis forensik digital, deteksi manipulasi media",
   openGraph: {
-    title: "Maleo AI Deepfake Detector - Deteksi Konten Palsu Sebelum Menyebar",
+    title:
+      "Maleo AI Deepfake Detector - Verifikasi Keaslian Konten Sebelum Menyebar",
     description:
-      "Verifikasi keaslian video dengan deteksi AI tingkat enterprise. Lindungi brand dan komunitas Anda dari deepfake.",
+      "Lindungi reputasi dan integritas informasi dengan sistem deteksi deepfake yang transparan dan akurat untuk kebutuhan publik dan perusahaan.",
     type: "article",
     url: "https://maleoai.com/id/portfolio/maleo-ai-deepfake-detector",
   },
@@ -31,90 +34,29 @@ export const metadata = {
 };
 
 const MaleoAIDeepfakeDetector = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "Untuk Tim Lapangan dan Operasional",
-      overview:
-        "Bayangkan supervisor Anda tidak perlu lagi keliling cek pekerjaan satu per satu. AI Digital Supervisor hadir lewat WhatsApp, memverifikasi setiap tugas dengan foto dan video real-time. Tim lapangan Anda tetap produktif, Anda tetap tenang.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/id/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "Untuk Perhotelan dan Retail",
-      overview:
-        "Tamu mengirim pesan pukul 2 pagi? Pelanggan tanya stok di Instagram? Tenang. Chatbot AI kami langsung melayani dalam 3 bahasa—bahkan saat tim Anda tidur. Customer service 24/7 tanpa harus bergadang.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/id/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "Untuk Media dan Kepercayaan Publik",
-      overview:
-        "Di era deepfake yang marak, satu video palsu bisa menghancurkan reputasi. Detector kami menganalisis keaslian konten dalam hitungan detik—sebelum viral, sebelum rugi. Lindungi brand Anda dari informasi palsu.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/id/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
-      overview:
-        "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/id/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Review Cerdas dan Kepatuhan",
-      overview:
-        "Review kontrak 100 halaman bisa bikin mata pegal dan pikiran buntu. AI Assistant kami baca, rangkum, dan tandai risiko dalam waktu singkat. Waktu review turun 50%, akurasi naik, dan Anda bisa pulang lebih cepat.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/id/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/id/portfolio/maleo-ai-deepfake-detector";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
-  const problems = [
+  const solutions = [
     {
       icon: faVideoSlash,
-      title: "Deepfake Udah Terlalu Realistis",
+      title: "Pemeriksa Konten AI Secara Real Time",
       description:
-        "Video palsu sekarang udah kayak asli. Mata manusia aja bisa ketipu. Gimana mau tau mana yang beneran?",
+        "Mendeteksi gambar, video, dan audio hasil buatan AI dengan tingkat akurasi tinggi dalam waktu singkat.",
     },
     {
       icon: faTriangleExclamation,
-      title: "Brand Anda Bisa Jadi Korban Kapan Aja",
+      title: "Analisis Multi-Moda",
       description:
-        "Satu video palsu tentang brand Anda bisa viral dalam sejam. Reputasi yang dibangun bertahun-tahun bisa hancur semalam.",
+        "Memeriksa keaslian suara, gambar, dan video menggunakan teknologi pengenalan pola berbasis AI yang mutakhir.",
     },
     {
       icon: faMagnifyingGlass,
-      title: "Susah Cari Detector yang Bisa Dipercaya",
+      title: "Arsitektur Berbasis Privasi",
       description:
-        "Tool yang ada mahal banget atau akurasinya ngaco. Buat keputusan penting, Anda butuh yang bener-bener reliable.",
-    },
-  ];
-
-  const solutions = [
-    {
-      title: "Upload, Tunggu Sebentar, Hasil Keluar",
-      description:
-        "Integrasikan lewat API atau langsung upload ke dashboard kami. Gak perlu ribet setup macam-macam.",
-    },
-    {
-      title: "Cek Audio, Video, Gambar—Semuanya",
-      description:
-        "Mau cek suara, foto, atau video? Bisa semua. AI kami analisis pola yang gak keliatan mata telanjang.",
-    },
-    {
-      title: "Data Anda Aman, Gak Bocor Kemana-Mana",
-      description:
-        "Diproses lokal atau di cloud yang secure. Semua transparan, ada log audit lengkap. Privacy is priority.",
+        "Seluruh data diproses secara lokal atau di cloud dengan sistem keamanan penuh, transparan, dan memiliki catatan audit yang dapat ditelusuri.",
     },
   ];
 
@@ -123,76 +65,44 @@ const MaleoAIDeepfakeDetector = () => {
       <Hero title="Maleo AI Deepfake Detector" />
 
       <Description
-        title="Satu Video Palsu Bisa Hancurin Reputasi"
-        description="Deepfake makin canggih, makin susah dibedain. Tapi tenang, detector kami bisa bedain mana asli mana palsu—dalam hitungan detik."
-        subdescription="AI kami udah dilatih dengan jutaan sampel video, foto, dan audio palsu. Dia bisa ngeliat detail kecil yang mata manusia gak bakal ketangkep—mulai dari pixel yang aneh, suara yang gak natural, sampai gerakan yang janggal. Hasilnya? Skor keaslian yang akurat plus laporan lengkap. Biar Anda bisa cegah penyebaran konten palsu sebelum viral dan merusak brand."
+        title="Tetap Terlindungi dari Hoaks dan Informasi Menyesatkan"
+        description="Maleo AI Deepfake Detector membantu Anda memverifikasi keaslian konten dan mendeteksi media buatan AI sebelum menyebarkan informasi yang salah."
+        subdescription="Dengan teknologi deep learning canggih yang dilatih dari jutaan sampel sintetis, sistem ini menganalisis tanda-tanda visual halus, ketidaksesuaian audio, dan anomali waktu yang sering kali tidak bisa dideteksi oleh mata manusia. Dalam hitungan detik, Anda akan mendapatkan skor kepercayaan dan laporan forensik detail sebagai lini pertahanan pertama terhadap disinformasi dan manipulasi berbasis AI."
       />
 
-      {/* Problem Section */}
+      {/* How It Works Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Era Deepfake: Apa Lagi yang Bisa Dipercaya?
+            Cara Kerja Maleo AI Deepfake Detector
           </h2>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Perusahaan media, brand besar, sampai organisasi publik setiap hari
-            terancam konten palsu. Dan cara manual? Udah gak mempan.
+            Sistem deteksi multi-moda yang menganalisis keaslian konten secara
+            menyeluruh.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {problems.map((problem, index) => (
+            {solutions.map((solution, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="mb-6">
                   <FontAwesomeIcon
-                    icon={problem.icon}
+                    icon={solution.icon}
                     className="text-[#FF6B2C] w-12 h-12"
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-[#FF6B2C]">
-                  {problem.title}
+                  {solution.title}
                 </h3>
-                <p className="text-gray-600">{problem.description}</p>
+                <p className="text-gray-600">{solution.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Solution Section */}
-      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          AI Kami Bisa Bedain Asli vs Palsu
-        </h2>
-        <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Upload konten, AI langsung analisis dari pixel sampai audio wave.
-          Hasilnya? Skor keaslian yang jelas dan bisa Anda pakai buat ambil
-          keputusan.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {solutions.map((solution, index) => (
-            <div key={index} className="bg-[#F8F8F8] p-8 rounded-lg">
-              <div className="text-[#FF6B2C] mb-4">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-[#FF6B2C]">
-                {solution.title}
-              </h3>
-              <p className="text-gray-600">{solution.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Demo Video Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 text-center">
-          Lihat dalam Aksi
+          Lihat Demo Produk
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
@@ -212,13 +122,14 @@ const MaleoAIDeepfakeDetector = () => {
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-8">
-            Bukan Tool Asal-asalan Buat Main-main
+            Keunggulan yang Membedakan
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Ini tool enterprise-grade buat institusi serius—media, pemerintah,
-            tim security. Setiap hasil ada log audit lengkap, keputusan AI bisa
-            dijelaskan, dan akurasinya memenuhi standar regulasi. Bukan cuma
-            asal tebak, tapi beneran reliable buat keputusan penting.
+            Maleo AI dirancang untuk kebutuhan publik maupun perusahaan, dengan
+            keputusan AI yang transparan dan dapat dijelaskan. Akurasinya setara
+            dengan standar kepatuhan industri dan regulasi, memastikan hasil
+            yang dapat dipercaya untuk melindungi reputasi dan integritas
+            informasi bisnis Anda.
           </p>
         </div>
       </div>

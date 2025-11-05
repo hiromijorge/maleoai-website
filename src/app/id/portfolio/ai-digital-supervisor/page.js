@@ -8,17 +8,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "AI Digital Supervisor - Otomasi Operasional Lapangan | Maleo AI",
+  title:
+    "AI Digital Supervisor - Operasional Lapangan yang Lebih Cerdas | Maleo AI",
   description:
-    "Asisten AI berbasis WhatsApp yang mengotomasi checklist harian, kepatuhan SOP, dan pelacakan kinerja untuk tim konstruksi, manufaktur, dan perhotelan. Kurangi waktu supervisi hingga 40%.",
+    "Asisten AI berbasis WhatsApp yang mengotomasi checklist harian, kepatuhan SOP, dan pelacakan kinerja dengan data perilaku kerja objektif. Analisis real-time untuk tim konstruksi, manufaktur, dan perhotelan.",
   keywords:
-    "AI supervisor, otomasi operasional lapangan, asisten AI WhatsApp, kepatuhan SOP, pelacakan kinerja, otomasi manufaktur, manajemen konstruksi, verifikasi tugas",
+    "AI supervisor, otomasi operasional lapangan, asisten AI WhatsApp, kepatuhan SOP, pelacakan kinerja objektif, analisis perilaku kerja, dashboard AI, verifikasi tugas real time, AR tutorial lapangan",
   openGraph: {
-    title: "AI Digital Supervisor - Operasional Lapangan yang Lebih Cerdas",
+    title: "AI Digital Supervisor - Akuntabilitas Real Time untuk Tim Lapangan",
     description:
-      "Otomasi operasional lapangan dengan verifikasi tugas bertenaga AI dan akuntabilitas real-time melalui WhatsApp.",
+      "Otomasi pengawasan harian dengan verifikasi foto/video, analisis perilaku kerja, dan dashboard AI untuk keputusan yang lebih akurat.",
     type: "article",
     url: "https://maleoai.com/id/portfolio/ai-digital-supervisor",
   },
@@ -31,90 +33,47 @@ export const metadata = {
 };
 
 const AIDigitalSupervisor = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "Untuk Tim Lapangan dan Operasional",
-      overview:
-        "Bayangkan supervisor Anda tidak perlu lagi keliling cek pekerjaan satu per satu. AI Digital Supervisor hadir lewat WhatsApp, memverifikasi setiap tugas dengan foto dan video real-time. Tim lapangan Anda tetap produktif, Anda tetap tenang.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/id/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "Untuk Perhotelan dan Retail",
-      overview:
-        "Tamu mengirim pesan pukul 2 pagi? Pelanggan tanya stok di Instagram? Tenang. Chatbot AI kami langsung melayani dalam 3 bahasa—bahkan saat tim Anda tidur. Customer service 24/7 tanpa harus bergadang.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/id/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "Untuk Media dan Kepercayaan Publik",
-      overview:
-        "Di era deepfake yang marak, satu video palsu bisa menghancurkan reputasi. Detector kami menganalisis keaslian konten dalam hitungan detik—sebelum viral, sebelum rugi. Lindungi brand Anda dari informasi palsu.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/id/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
-      overview:
-        "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/id/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Review Cerdas dan Kepatuhan",
-      overview:
-        "Review kontrak 100 halaman bisa bikin mata pegal dan pikiran buntu. AI Assistant kami baca, rangkum, dan tandai risiko dalam waktu singkat. Waktu review turun 50%, akurasi naik, dan Anda bisa pulang lebih cepat.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/id/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/id/portfolio/ai-digital-supervisor";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
   const problems = [
     {
       icon: faCircleXmark,
-      title: "Checklist Cuma Formalitas Doang",
+      title: "Checklist palsu dan laporan tidak konsisten",
       description:
-        "Tim lapangan centang semua tanpa ngerjain beneran. Pas ada masalah, baru ketahuan mereka bohong.",
+        "Sulit memastikan pekerjaan benar-benar selesai sesuai standar.",
     },
     {
       icon: faClock,
-      title: "Supervisor Keliling Terus, Tetep Aja Kecolongan",
+      title: "Verifikasi manual buang waktu",
       description:
-        "Supervisor habis waktu berjam-jam keliling cek kerjaan. Udah capek, tetep aja ada yang lolos.",
+        "Supervisor harus terus mengejar bukti kerja dan memeriksa satu per satu tugas secara manual.",
     },
     {
       icon: faRotate,
-      title: "Training Mahal, Tapi Lupa Lagi",
+      title: "Pelatihan tidak bertahan lama",
       description:
-        "Abis training mahal-mahal, seminggu kemudian tim balik lagi ke kebiasaan lama. Uang buang percuma.",
+        "Kesalahan terus berulang karena karyawan tidak mengingat lagi informasi dan hasil pelatihan tidak terbawa ke perilaku nyata di lapangan.",
     },
   ];
 
   const solutions = [
     {
-      title: "Checklist Otomatis Langsung ke HP Tim",
+      title: "Checklist Harian Otomatis & Tercatat",
       description:
-        "Pagi-pagi, tugas harian udah masuk WhatsApp masing-masing. Selesai satu, langsung ketandain. Real-time.",
+        "Tugas harian dikirim otomatis ke anggota tim, dan setiap aktivitas tercatat secara real time.",
     },
     {
-      title: "AI Cek Foto & Video, Gak Bisa Diakali",
+      title: "Bukti Pekerjaan Terverifikasi",
       description:
-        "Upload foto sembarangan? AI langsung tau itu foto lama atau palsu. Semua bukti kerja terverifikasi otomatis.",
+        "Supervisor dapat mengonfirmasi tugas selesai dengan bukti foto atau video yang nyata.",
     },
     {
-      title: "Dashboard Sekali Lihat, Semua Jelas",
+      title: "Dashboard Kinerja Berbasis AI",
       description:
-        "Buka dashboard, langsung tau siapa yang udah selesai, siapa yang telat, dan siapa yang bolos. Tanpa perlu tanya satu-satu.",
+        "Menampilkan tingkat penyelesaian, keterlambatan, dan skor kinerja, sehingga manajer punya pandangan objektif terhadap performa tim (Objective performance review).",
     },
   ];
 
@@ -123,20 +82,22 @@ const AIDigitalSupervisor = () => {
       <Hero title="AI Digital Supervisor" />
 
       <Description
-        title="Supervisor Digital yang Gak Pernah Tidur"
-        description="Bayangkan punya supervisor yang bisa cek pekerjaan 50 orang sekaligus, gak pernah capek, dan gak pernah lupa. Itulah AI Digital Supervisor."
-        subdescription="Lewat WhatsApp—aplikasi yang udah dipake tim Anda sehari-hari—sistem ini verifikasi setiap tugas pakai computer vision. Foto palsu? Ketahuan. Laporan fiktif? Langsung ketangkep. Hasilnya? Waktu supervisi turun 40%, akuntabilitas naik drastis, dan Anda punya data lapangan yang bisa dipercaya 100%."
+        title="Operasional Lapangan yang Lebih Cerdas, Akuntabilitas Secara Real Time"
+        description="Asisten AI berbasis WhatsApp yang mengotomatiskan checklist harian, kepatuhan SOP, dan pelacakan kinerja. Dirancang untuk tim lintas industri yang mengutamakan konsistensi dan bukti kerja."
+        subdescription="Fitur utamanya mencakup pengingat tugas, verifikasi foto dan video (jika diperlukan), analisis perilaku kerja, panduan visual berbasis AR untuk instruksi di lapangan, serta dashboard real time bagi manajer untuk memantau dan menyetujui progres."
       />
 
       {/* Problem Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Kerja Lapangan Itu Susah Dikontrol
+            Tantangan yang Sering Terjadi
           </h2>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Jarak jauh, banyak lokasi, dan supervisor cuma punya dua mata. Ini
-            masalah klasik yang bikin kepala pusing setiap hari.
+            Mengelola tim yang berada di berbagai lokasi (termasuk luar kota)
+            itu rumit. Pemilik bisnis dan pengambil keputusan sering kehilangan
+            waktu karena visibilitas yang minim dan kurangnya kontrol, sehingga
+            meningkatkan potensi Fraud yang mengakibatkan kerugian bisnis.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {problems.map((problem, index) => (
@@ -160,11 +121,11 @@ const AIDigitalSupervisor = () => {
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          Solusinya? Automasi + AI Verifikasi
+          Solusi dari AI Digital Supervisor
         </h2>
         <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Semua jalan lewat WhatsApp. Gak perlu install aplikasi baru, gak perlu
-          training ribet. Langsung pakai.
+          Asisten ini mengotomatisasi pengawasan harian langsung lewat WhatsApp
+          karyawan, tanpa perlu instal aplikasi baru.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -191,7 +152,7 @@ const AIDigitalSupervisor = () => {
       {/* Demo Video Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 text-center">
-          Lihat dalam Aksi
+          Lihat Demo Produk
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
@@ -211,14 +172,22 @@ const AIDigitalSupervisor = () => {
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-8">
-            Kenapa Beda dari Apps Lain?
+            Keunggulan yang Membedakan
           </h2>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-4">
+            Berbeda dari aplikasi absen atau task tracker biasa, sistem ini
+            dirancang untuk memahami setiap peran di industri masing-masing.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-4">
+            Pemilik bisnis dan manajer mendapatkan gambaran objektif tentang
+            performa tim berdasarkan data perilaku kerja yang nyata yang
+            semuanya berjalan lewat WhatsApp.
+          </p>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Aplikasi task manager lain bikin ribet—harus install, harus login,
-            harus training. Sistem kami? Jalan di WhatsApp yang udah semua orang
-            punya. Langsung pakai pagi ini, langsung jalan sore ini. Plus, kami
-            paham kebutuhan spesifik industri konstruksi, pabrik, dan hotel.
-            Bukan cuma to-do list biasa.
+            Tim Anda tidak perlu adaptasi aplikasi baru, jadi penggunaannya
+            langsung mudah dan cepat. Sebagai manajer atau pemilik bisnis, Anda
+            bisa memantau progres lewat dashboard yang membantu mengambil
+            keputusan lebih akurat termasuk untuk promosi, bonus, atau evaluasi.
           </p>
         </div>
       </div>

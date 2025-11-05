@@ -3,17 +3,18 @@ import Link from "next/link";
 import Description from "../../components/services/Description";
 import Hero from "../../components/services/Hero";
 import TechOverview from "../../components/services/TechOverview";
+import { portfolios } from "./portfolioData";
 
 export const metadata = {
-  title: "Portofolio - Solusi AI & Kisah Sukses | Maleo AI",
+  title: "Portofolio - Solusi AI yang Terbukti Memberi Hasil | Maleo AI",
   description:
-    "Jelajahi portofolio solusi AI yang telah kami kembangkan untuk klien di berbagai industri. Mulai dari otomasi operasional lapangan hingga chatbot layanan pelanggan, deteksi deepfake, asisten intelijen bisnis, dan analisis dokumen legal.",
+    "Solusi kecerdasan buatan yang mudah diterapkan dan memberikan dampak terukur. Dari otomasi operasional hingga chatbot layanan pelanggan, deteksi deepfake, asisten intelijen bisnis, dan tinjauan dokumen hukum.",
   keywords:
-    "portofolio AI, solusi AI, kisah sukses pelanggan, studi kasus AI, transformasi digital, implementasi AI, otomasi bisnis, chatbot AI, deteksi deepfake, intelijen bisnis",
+    "portofolio AI, solusi AI praktis, implementasi AI Indonesia, otomasi bisnis, chatbot AI, deteksi deepfake, intelijen bisnis, asisten dokumen hukum, AI untuk konstruksi, AI untuk perhotelan",
   openGraph: {
-    title: "Portofolio - Solusi AI & Kisah Sukses | Maleo AI",
+    title: "Portofolio - Solusi AI yang Terbukti Memberi Hasil | Maleo AI",
     description:
-      "Temukan bagaimana kami membantu bisnis mentransformasi operasi mereka dengan solusi AI khusus di sektor manufaktur, perhotelan, media, dan enterprise.",
+      "Kami membantu bisnis meningkatkan efisiensi, menekan biaya, dan membuat keputusan lebih cepat dengan solusi AI yang relevan dengan kebutuhan industri Anda.",
     type: "website",
     url: "https://maleoai.com/id/portfolio",
   },
@@ -26,58 +27,15 @@ export const metadata = {
 };
 
 const Portfolio = () => {
-  const portfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "Untuk Tim Lapangan dan Operasional",
-      overview:
-        "Bayangkan supervisor Anda tidak perlu lagi keliling cek pekerjaan satu per satu. AI Digital Supervisor hadir lewat WhatsApp, memverifikasi setiap tugas dengan foto dan video real-time. Tim lapangan Anda tetap produktif, Anda tetap tenang.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/id/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "Untuk Perhotelan dan Retail",
-      overview:
-        "Tamu mengirim pesan pukul 2 pagi? Pelanggan tanya stok di Instagram? Tenang. Chatbot AI kami langsung melayani dalam 3 bahasa—bahkan saat tim Anda tidur. Customer service 24/7 tanpa harus bergadang.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/id/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "Untuk Media dan Kepercayaan Publik",
-      overview:
-        "Di era deepfake yang marak, satu video palsu bisa menghancurkan reputasi. Detector kami menganalisis keaslian konten dalam hitungan detik—sebelum viral, sebelum rugi. Lindungi brand Anda dari informasi palsu.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/id/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
-      overview:
-        "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/id/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Review Cerdas dan Kepatuhan",
-      overview:
-        "Review kontrak 100 halaman bisa bikin mata pegal dan pikiran buntu. AI Assistant kami baca, rangkum, dan tandai risiko dalam waktu singkat. Waktu review turun 50%, akurasi naik, dan Anda bisa pulang lebih cepat.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/id/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <Hero title="Portofolio Kami" />
 
       {/* Description Section */}
       <Description
-        title="Solusi AI yang Terbukti"
-        description="Di Maleo AI, kami tidak hanya membangun teknologi—kami menghadirkan solusi yang menyelesaikan tantangan bisnis nyata. Portofolio kami menampilkan implementasi AI di berbagai industri, mulai dari otomasi operasional dan keterlibatan pelanggan hingga verifikasi konten dan intelijen data."
-        subdescription="Setiap proyek dirancang dengan tujuan yang jelas: mengurangi biaya, meningkatkan efisiensi, dan menciptakan dampak yang terukur. Jelajahi bagaimana kami mentransformasi alur kerja dan memberdayakan tim dengan sistem cerdas yang disesuaikan dengan kebutuhan unik mereka."
+        title="Solusi AI yang Terbukti Memberi Hasil"
+        description="Di Maleo AI, kami fokus pada hasil nyata, bukan sekadar teknologi. Kami membantu bisnis meningkatkan efisiensi, menekan biaya, dan membuat keputusan lebih cepat dengan solusi kecerdasan buatan yang bisa diterapkan langsung."
+        subdescription="Setiap solusi kami dirancang agar mudah diadopsi, memberikan dampak terukur, dan relevan dengan kebutuhan industri Anda."
       />
 
       {/* Portfolio Section */}
@@ -161,7 +119,7 @@ const Portfolio = () => {
       </section>
 
       {/* Tech Overview Section */}
-      <TechOverview />
+      <TechOverview language="id" />
 
       {/* Final CTA Section */}
       <section className="bg-[#FF6B2C] text-white py-16 md:py-32">

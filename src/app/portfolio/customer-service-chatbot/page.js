@@ -8,17 +8,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "Customer Service Chatbot - Multilingual AI Assistant | Maleo AI",
+  title: "Maleo AI Chatbot - Custom Multilingual AI Assistant | Maleo AI",
   description:
-    "AI chatbot that manages customer inquiries 24/7 in English, Mandarin, and Indonesian across WhatsApp, Instagram, and web. Perfect for hospitality and retail businesses.",
+    "Custom chat assistant that handles inquiries, manages bookings, sends follow-ups, and upsells in English, Mandarin, and Indonesian. Built around your company's needs with 24/7 support across WhatsApp, Instagram, and web.",
   keywords:
-    "AI chatbot, customer service automation, multilingual chatbot, WhatsApp bot, hospitality chatbot, retail automation, 24/7 customer support, booking automation",
+    "AI chatbot, custom chat assistant, multilingual chatbot, WhatsApp bot, hospitality chatbot, retail automation, 24/7 customer support, booking automation, follow-up messages, upselling, knowledge base training",
   openGraph: {
-    title: "Customer Service Chatbot - 24/7 Multilingual Support",
+    title: "Maleo AI Chatbot - Custom 24/7 Multilingual Support",
     description:
-      "Deliver perfect replies around the clock in English, Mandarin, and Indonesian with AI-powered customer service.",
+      "Deliver perfect replies around the clock in English, Mandarin, and Indonesian. Custom-built chat assistant that extends your team's reach without hiring extra staff.",
     type: "article",
     url: "https://maleoai.com/portfolio/customer-service-chatbot",
   },
@@ -31,51 +32,8 @@ export const metadata = {
 };
 
 const CustomerServiceChatbot = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "For Field and Operational Teams",
-      overview:
-        "A WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "For Hospitality and Retail",
-      overview:
-        "An AI chatbot that manages customer inquiries, bookings, and FAQs in English, Chinese, and Indonesian across WhatsApp, Instagram, and your website. Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "For Media and Public Trust",
-      overview:
-        "A deepfake detection tool that analyzes voice, image, and video content for authenticity — built for media, education, and cybersecurity applications. Protect your brand and community from misinformation. Verify content before it spreads.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Data Insight and Predictive Operations",
-      overview:
-        "A specialized AI system that consolidates sensor, production, and logistics data into actionable insights. Reduce downtime, optimize maintenance cycles, and make faster, data-driven decisions across the supply chain.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Smart Review and Compliance",
-      overview:
-        "An AI-powered assistant that reviews, summarizes, and cross-checks legal or contract documents to accelerate due diligence and compliance reviews. Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/portfolio/customer-service-chatbot";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
@@ -120,12 +78,12 @@ const CustomerServiceChatbot = () => {
 
   return (
     <div className="min-h-screen">
-      <Hero title="Customer Service Chatbot" />
+      <Hero title="Maleo AI Chatbot" />
 
       <Description
-        title="Deliver Perfect Replies — 24/7 in English, Mandarin, and Indonesian."
-        description="Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes."
-        subdescription="Built specifically for hospitality operations, this intelligent assistant seamlessly handles booking inquiries, property information, and guest support with natural conversation flow. It instantly converts conversations into confirmed reservations across multiple languages while your staff focuses on delivering exceptional in-person experiences that create lasting memories."
+        title="Deliver Perfect Replies 24/7 in English, Mandarin, and Indonesian"
+        description="Provide instant and consistent customer service around the clock, so your team can focus on guests instead of inboxes."
+        subdescription="Our custom chat assistant is built around your company's needs. It handles questions, shares information, and manages booking inquiries with a natural conversational flow. It can also send follow up messages, promote offers, and upsell to potential customers in multiple languages — while your staff focuses on delivering exceptional in person experiences that leave a lasting impression."
       />
 
       {/* Problem Section */}
@@ -194,10 +152,16 @@ const CustomerServiceChatbot = () => {
             What Makes It Different
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Not a generic chatbot — it's industry-trained, understands tone, and
-            switches seamlessly between English, Mandarin, and Bahasa Indonesia.
-            It adapts to your hospitality or retail brand voice, ensuring every
-            interaction feels personal and professional.
+            This is not a generic chatbot. It is trained for your industry,
+            understands tone, and can switch smoothly between English, Mandarin,
+            and Bahasa Indonesia.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mt-4">
+            It is not meant to replace your customer service team, but to extend
+            their reach so you can offer 24 hour support without hiring extra
+            staff. We also train your admins to keep the knowledge base updated,
+            and our team is always ready to support yours in keeping the AI
+            sharp and reliable.
           </p>
         </div>
       </div>

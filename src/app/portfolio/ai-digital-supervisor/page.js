@@ -8,17 +8,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolios } from "../portfolioData";
 
 export const metadata = {
-  title: "AI Digital Supervisor - Field Operations Automation | Maleo AI",
+  title:
+    "AI Digital Supervisor - WhatsApp-Based Field Operations Automation | Maleo AI",
   description:
-    "WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking for construction, manufacturing, and hospitality teams. Reduce supervision time by 40%.",
+    "WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Get objective performance data, behavior analytics, and real-time dashboards for construction, manufacturing, and hospitality teams.",
   keywords:
-    "AI supervisor, field operations automation, WhatsApp AI assistant, SOP compliance, performance tracking, manufacturing automation, construction management, task verification",
+    "AI supervisor, field operations automation, WhatsApp AI assistant, SOP compliance, performance tracking, objective performance data, behavior analytics, real-time dashboard, construction management, manufacturing automation, hospitality operations, task verification",
   openGraph: {
-    title: "AI Digital Supervisor - Smarter Field Operations",
+    title:
+      "AI Digital Supervisor - Objective Performance Data Through WhatsApp",
     description:
-      "Automate field operations with AI-powered task verification and real-time accountability through WhatsApp.",
+      "Automate daily supervision with AI-powered task verification, behavior analytics, and real-time accountability. Make objective decisions for promotions, bonuses, or penalties based on actual employee behavior data.",
     type: "article",
     url: "https://maleoai.com/portfolio/ai-digital-supervisor",
   },
@@ -31,90 +34,47 @@ export const metadata = {
 };
 
 const AIDigitalSupervisor = () => {
-  const allPortfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "For Field and Operational Teams",
-      overview:
-        "A WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "For Hospitality and Retail",
-      overview:
-        "An AI chatbot that manages customer inquiries, bookings, and FAQs in English, Chinese, and Indonesian across WhatsApp, Instagram, and your website. Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "For Media and Public Trust",
-      overview:
-        "A deepfake detection tool that analyzes voice, image, and video content for authenticity — built for media, education, and cybersecurity applications. Protect your brand and community from misinformation. Verify content before it spreads.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Data Insight and Predictive Operations",
-      overview:
-        "A specialized AI system that consolidates sensor, production, and logistics data into actionable insights. Reduce downtime, optimize maintenance cycles, and make faster, data-driven decisions across the supply chain.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Smart Review and Compliance",
-      overview:
-        "An AI-powered assistant that reviews, summarizes, and cross-checks legal or contract documents to accelerate due diligence and compliance reviews. Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   const currentPath = "/portfolio/ai-digital-supervisor";
-  const otherPortfolios = allPortfolios.filter(
+  const otherPortfolios = portfolios.filter(
     (portfolio) => portfolio.link !== currentPath
   );
 
   const problems = [
     {
       icon: faCircleXmark,
-      title: "Missed Tasks & Fake Checklists",
+      title: "Missed Tasks and Fake Checklists",
       description:
-        "Inconsistent reports and fake checklists make it impossible to trust field data.",
+        "Inconsistent reports and fake checklists make it hard to trust what is actually getting done.",
     },
     {
       icon: faClock,
       title: "Manual Verification Waste",
       description:
-        "Supervisors waste hours manually verifying proof of work completion.",
+        "Supervisors lose hours chasing proof of work and double checking every task by hand.",
     },
     {
       icon: faRotate,
-      title: "Training Doesn't Stick",
+      title: "Training Does Not Stick",
       description:
-        "Mistakes repeat because training doesn't translate to actual field behavior.",
+        "Mistakes keep happening because training does not carry over to real onsite behavior.",
     },
   ];
 
   const solutions = [
     {
-      title: "Task Checklists Auto-Sent and Logged",
+      title: "Task Checklists Automatically Sent and Logged",
       description:
-        "Daily tasks are automatically sent to team members and completion is tracked in real-time.",
+        "Daily tasks are sent to team members automatically, and every action is tracked in real time.",
     },
     {
-      title: "AI-Verified Proof of Completion",
+      title: "Verified Proof of Completion",
       description:
-        "AI analyzes photos and videos to verify task completion authenticity automatically.",
+        "Supervisors confirm task completion using real photo or video evidence.",
     },
     {
-      title: "Real-Time Performance Dashboards",
+      title: "AI Performance Dashboards for Objective Reviews",
       description:
-        "Dashboards summarize completion rates, delays, and performance scores for instant visibility.",
+        "Dashboards show completion rates, delays, and performance scores, giving managers instant visibility.",
     },
   ];
 
@@ -124,18 +84,18 @@ const AIDigitalSupervisor = () => {
 
       <Description
         title="Smarter Field Operations. Real-Time Accountability."
-        description="Reduce supervision time by 40%, improve compliance accuracy, and ensure accountability across every remote job site."
-        subdescription="Through advanced computer vision and intelligent task verification, this system provides manufacturing leaders with unprecedented visibility into field operations, ensuring every task is completed correctly, on time, and with verifiable proof of work — all through the familiar WhatsApp interface your team already uses."
+        description="A WhatsApp based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter."
+        subdescription="Key capabilities include task reminders, photo and video verification, behavior analytics, AR based visual tutorials for onsite guidance, and a real time dashboard for managers to monitor and approve progress."
       />
 
       {/* Problem Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Managing Distributed Teams Is Chaotic
+            Managing distributed teams is chaotic
           </h2>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Decision-makers feel it as lost time, poor visibility, and lack of
+            Decision makers feel it as lost time, poor visibility, and lack of
             control.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -190,7 +150,7 @@ const AIDigitalSupervisor = () => {
       {/* Demo Video Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 text-center">
-          See It In Action
+          Product Demo
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
@@ -213,10 +173,16 @@ const AIDigitalSupervisor = () => {
             What Makes It Different
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Unlike generic task trackers, this system speaks your operational
-            language — construction, factory, or hospitality — and runs entirely
-            on WhatsApp. Your team doesn't need to learn a new app, and you get
-            instant adoption with zero training friction.
+            Unlike typical task trackers or attendance apps, this system is
+            built to understand every role in each specific industry. It gives
+            managers and business owners an objective view of performance based
+            on real employee behavior data, and it all runs on WhatsApp.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mt-4">
+            Your team does not need to learn a new app, so adoption is instant
+            and friction free. As a manager or business owner, you get a
+            dashboard that helps you make the right decisions for the right
+            people, whether it is a promotion, a bonus, or a penalty.
           </p>
         </div>
       </div>

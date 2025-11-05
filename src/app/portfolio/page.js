@@ -3,17 +3,18 @@ import Link from "next/link";
 import Description from "../components/services/Description";
 import Hero from "../components/services/Hero";
 import TechOverview from "../components/services/TechOverview";
+import { portfolios } from "./portfolioData";
 
 export const metadata = {
-  title: "Portfolio - AI Solutions & Success Stories | Maleo AI",
+  title: "Portfolio - Proven AI Solutions & Success Stories | Maleo AI",
   description:
-    "Explore our portfolio of AI solutions delivered to clients across industries. From field operations automation to customer service chatbots, deepfake detection, business intelligence assistants, and legal document analysis.",
+    "Explore proven AI solutions that solve real business challenges. From field operations automation to customer service chatbots, deepfake detection, business intelligence, and legal document analysis across industries.",
   keywords:
-    "AI portfolio, AI solutions, customer success stories, AI case studies, digital transformation, AI implementation, business automation, AI chatbot, deepfake detection, business intelligence",
+    "AI portfolio, proven AI solutions, business automation, AI implementation, operational automation, customer engagement AI, deepfake detection, data intelligence, legal document AI, AI case studies, digital transformation",
   openGraph: {
-    title: "Portfolio - AI Solutions & Success Stories | Maleo AI",
+    title: "Portfolio - Proven AI Solutions & Success Stories | Maleo AI",
     description:
-      "Discover how we've helped businesses transform operations with custom AI solutions across manufacturing, hospitality, media, and enterprise sectors.",
+      "Discover proven AI implementations that transform workflows and empower teams. Solutions designed to reduce costs, improve efficiency, and create measurable impact across manufacturing, hospitality, media, and enterprise sectors.",
     type: "website",
     url: "https://maleoai.com/portfolio",
   },
@@ -26,49 +27,6 @@ export const metadata = {
 };
 
 const Portfolio = () => {
-  const portfolios = [
-    {
-      title: "AI Digital Supervisor",
-      subtitle: "For Field and Operational Teams",
-      overview:
-        "A WhatsApp-based AI assistant that automates daily checklists, SOP compliance, and performance tracking. Designed for construction, manufacturing, and hospitality teams where consistency and proof of work matter.",
-      image: "/assets/ai-digital-supervisor.png",
-      link: "/portfolio/ai-digital-supervisor",
-    },
-    {
-      title: "Customer Service Chatbot",
-      subtitle: "For Hospitality and Retail",
-      overview:
-        "An AI chatbot that manages customer inquiries, bookings, and FAQs in English, Chinese, and Indonesian across WhatsApp, Instagram, and your website. Deliver instant and consistent service around the clock — so your team can focus on guests, not inboxes.",
-      image: "/assets/customer-service-chatbot.png",
-      link: "/portfolio/customer-service-chatbot",
-    },
-    {
-      title: "Maleo AI Deepfake Detector",
-      subtitle: "For Media and Public Trust",
-      overview:
-        "A deepfake detection tool that analyzes voice, image, and video content for authenticity — built for media, education, and cybersecurity applications. Protect your brand and community from misinformation. Verify content before it spreads.",
-      image: "/assets/maleo-ai-deepfake-detector.png",
-      link: "/portfolio/maleo-ai-deepfake-detector",
-    },
-    {
-      title: "AI Business Assistant",
-      subtitle: "Data Insight and Predictive Operations",
-      overview:
-        "A specialized AI system that consolidates sensor, production, and logistics data into actionable insights. Reduce downtime, optimize maintenance cycles, and make faster, data-driven decisions across the supply chain.",
-      image: "/assets/ai-business-assistant.png",
-      link: "/portfolio/ai-business-assistant",
-    },
-    {
-      title: "AI Assistant for Legal Documents",
-      subtitle: "Smart Review and Compliance",
-      overview:
-        "An AI-powered assistant that reviews, summarizes, and cross-checks legal or contract documents to accelerate due diligence and compliance reviews. Cut review time by 50%, minimize human error, and maintain audit-ready compliance across all legal documentation.",
-      image: "/assets/ai-assistant-for-legal-documents.png",
-      link: "/portfolio/ai-assistant-legal-documents",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <Hero title="Our Portfolio" />
@@ -76,8 +34,8 @@ const Portfolio = () => {
       {/* Description Section */}
       <Description
         title="Proven AI Solutions"
-        description="At Maleo AI, we don't just build technology—we deliver solutions that solve real business challenges. Our portfolio showcases AI implementations across industries, from operational automation and customer engagement to content verification and data intelligence."
-        subdescription="Each project is designed with a clear purpose: to reduce costs, improve efficiency, and create measurable impact. Explore how we've transformed workflows and empowered teams with intelligent systems tailored to their unique needs."
+        description="At Maleo AI, we don't just build technology, we deliver solutions that solve real business challenges. Our portfolio showcases AI implementations across industries, from operational automation and customer engagement to content verification and data intelligence."
+        subdescription="Each project is designed with a clear purpose, to reduce costs, improve efficiency, and create measurable impact. Explore how we've transformed workflows and empowered teams with intelligent systems tailored to their unique needs."
       />
 
       {/* Portfolio Section */}
@@ -161,7 +119,7 @@ const Portfolio = () => {
       </section>
 
       {/* Tech Overview Section */}
-      <TechOverview />
+      <TechOverview language="en" />
 
       {/* Final CTA Section */}
       <section className="bg-[#FF6B2C] text-white py-16 md:py-32">

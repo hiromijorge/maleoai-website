@@ -10,15 +10,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "AI Legal Document Assistant - Otomasi Review Kontrak | Maleo AI",
+  title:
+    "AI Legal Document Assistant - Review Kontrak dengan Bantuan AI | Maleo AI",
   description:
-    "Asisten AI cerdas yang menyederhanakan review kontrak, perbandingan, dan analisis risiko. Pangkas waktu review legal hingga 50% dengan ekstraksi klausul otomatis, penandaan risiko, dan pemeriksaan kepatuhan.",
+    "Pemeriksa dokumen legal cerdas yang membantu menganalisis kontrak, mengurangi waktu review, dan memastikan keselarasan regulasi. AI membantu ekstraksi klausul, penandaan risiko, dan perbandingan versi sambil menjaga manusia tetap dalam kontrol keputusan final.",
   keywords:
-    "asisten legal AI, otomasi review kontrak, analisis dokumen legal, perbandingan kontrak AI, otomasi kepatuhan, teknologi legal, AI dokumen, intelijen kontrak",
+    "asisten legal AI, otomasi review kontrak, analisis dokumen legal, perbandingan kontrak AI, dukungan kepatuhan, teknologi legal, AI dokumen, intelijen kontrak, pengawasan manusia, kepatuhan siap audit, ekstraksi klausul, analisis risiko",
   openGraph: {
-    title: "AI Legal Document Assistant - Review Kontrak Cerdas",
+    title:
+      "AI Legal Document Assistant - Review Lebih Cepat dengan Pengawasan Manusia",
     description:
-      "Otomasi review dokumen legal dengan ekstraksi klausul bertenaga AI, analisis risiko, dan perbandingan versi.",
+      "Review dokumen legal dengan bantuan AI yang membantu tim bekerja secara signifikan lebih cepat sambil mempertahankan kontrol manusia. Kurangi waktu review hingga 50%, kurangi kesalahan, dan pastikan kepatuhan siap audit.",
     type: "article",
     url: "https://maleoai.com/id/portfolio/ai-assistant-legal-documents",
   },
@@ -58,7 +60,7 @@ const AIAssistantLegalDocuments = () => {
     },
     {
       title: "AI Business Assistant",
-      subtitle: "Wawasan Data dan Operasi Prediktif",
+      subtitle: "Informasi Data dan Operasi Prediktif",
       overview:
         "Data produksi Anda sebetulnya sudah bicara—tapi siapa yang dengerin? AI Business Assistant mengubah angka-angka dari sensor dan logistik jadi insight yang langsung bisa Anda pakai. Prediksi maintenance, kurangi downtime, hemat jutaan.",
       image: "/assets/ai-business-assistant.png",
@@ -82,39 +84,39 @@ const AIAssistantLegalDocuments = () => {
   const problems = [
     {
       icon: faCopy,
-      title: "Versi Dokumen Banyak, Bingung Mana yang Bener",
+      title: "Versi Dokumen yang Tidak Konsisten",
       description:
-        "Versi 1, 2, 3, final, final-revisi, final-final... Bingung sendiri mana yang terbaru. Bahaya banget kalau yang diteken versi yang salah.",
+        "Beberapa versi beredar sekaligus menciptakan kebingungan dan meningkatkan risiko kepatuhan.",
     },
     {
       icon: faEyeSlash,
-      title: "Klausul Bahaya Nyempil di Tengah-tengah",
+      title: "Klausul Risiko Tersembunyi",
       description:
-        "Kontrak 100 halaman, klausul berisiko nyempil di halaman 73. Pas ketahuan? Udah telat, udah tanda tangan.",
+        "Tanda bahaya penting yang terkubur jauh di dalam dokumen panjang sering tidak terperhatikan sampai terlambat.",
     },
     {
       icon: faCodeCompare,
-      title: "Bandingin Kontrak Lama vs Baru? Pegel!",
+      title: "Perbandingan Manual di Bawah Tekanan",
       description:
-        "Scroll halaman 1-50, cek satu-satu apa yang berubah. Makan waktu berjam-jam. Deadline makin deket, stress makin tinggi.",
+        "Tim menghabiskan waktu berjam-jam membandingkan kontrak baris demi baris sementara tenggat waktu mendekat.",
     },
   ];
 
   const solutions = [
     {
-      title: "AI Tandain Klausul yang Bahaya",
+      title: "Ekstraksi Klausul dan Penandaan Risiko",
       description:
-        "Upload kontrak, AI langsung scan dan kasih tanda merah di klausul yang berisiko. Kewajiban tersembunyi? Langsung ketangkep.",
+        "Secara otomatis mengidentifikasi dan menandai klausul berisiko, liabilitas, dan persyaratan tidak biasa untuk validasi lebih cepat.",
     },
     {
-      title: "Bandingin Versi Lama vs Baru, Otomatis",
+      title: "Perbandingan Kontrak (Lama vs Baru)",
       description:
-        "Upload dua versi, AI kasih tau apa aja yang berubah, ditambahin, atau dihapus. Gak perlu scroll bolak-balik.",
+        "Dengan cepat membandingkan versi dan menyoroti perubahan, penghapusan, dan penambahan dengan konteks penuh.",
     },
     {
-      title: "Ringkasan Singkat, Langsung ke Poin Penting",
+      title: "Ringkasan Otomatis dan Sorotan Tanda Bahaya",
       description:
-        "Kontrak 100 halaman? AI bikin ringkasan 1 halaman dengan highlight red flag yang harus diperhatiin. Simple.",
+        "Menghasilkan ringkasan ringkas dengan isu kritis yang disorot dengan jelas untuk review manusia.",
     },
   ];
 
@@ -123,20 +125,23 @@ const AIAssistantLegalDocuments = () => {
       <Hero title="AI Assistant for Legal Documents" />
 
       <Description
-        title="Baca Kontrak 100 Halaman = Mata Pegal, Otak Buntu"
-        description="Kontrak tebal penuh istilah legal bikin pusing. Tapi harus teliti kan? Satu klausul kelewat, bisa rugi besar."
-        subdescription="AI Legal Assistant kami baca kontrak super cepat, tandain risiko yang tersembunyi, bandingin versi lama vs baru, dan kasih ringkasan yang gampang dipahami. Yang tadinya butuh berhari-hari buat review, sekarang cuma butuh beberapa menit. Tim legal Anda bisa kerja lebih cepat tanpa takut ada yang kelewat. Akurasi naik, waktu review turun 50%, dan Anda bisa pulang lebih cepat."
+        title="Bayangkan memiliki pemeriksa dokumen legal cerdas yang membantu Anda menganalisis setiap kontrak, mengurangi waktu review, dan memastikan dokumen selaras dengan regulasi yang tepat."
+        description="Asisten ini membantu tim legal Anda bekerja secara signifikan lebih cepat, mengurangi kesalahan manusia, dan mempertahankan kepatuhan siap audit di semua dokumen. Ini mendukung reviewer manusia, membantu mereka dengan cepat memverifikasi ratusan klausul dan parafrase yang sebaliknya akan memakan waktu berhari-hari untuk memeriksa secara manual."
+        subdescription="Didukung oleh pemrosesan bahasa alami canggih yang dilatih pada terminologi legal dan struktur kontrak, AI mengekstrak klausul kunci, menandai potensi risiko, membandingkan versi dokumen secara berdampingan, dan memberikan informasi konsisten di seluruh portofolio kontrak Anda. Ini mengubah pekerjaan review yang lambat dan berulang menjadi analisis yang cepat dan terstruktur sambil menjaga manusia tetap dalam kontrol setiap keputusan akhir."
       />
 
       {/* Problem Section */}
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            Review Legal = Buang-Buang Waktu Berharga
+            Masalahnya
           </h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#FF6B2C]">
+            Tim Legal Kehilangan Jam untuk Pemeriksaan Berulang
+          </h3>
           <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-            Baca manual, cek satu-satu, takut ada yang kelewat. Kejar deadline,
-            risiko tinggi. Ada cara yang lebih cerdas.
+            Review manual di bawah tenggat waktu ketat sering menyebabkan risiko
+            yang terlewat dan kesenjangan kepatuhan.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {problems.map((problem, index) => (
@@ -160,11 +165,14 @@ const AIAssistantLegalDocuments = () => {
       {/* Solution Section */}
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-center">
-          Biar AI yang Baca, Anda Tinggal Ambil Keputusan
+          Bagaimana Asisten AI Legal Mengatasi Ini
         </h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#FF6B2C]">
+          Pembacaan Cerdas dan Ringkasan Instan
+        </h3>
         <p className="text-gray-600 text-lg mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          Upload dokumen, AI langsung kerja. Ekstrak klausul, analisis risiko,
-          bandingin versi. Cepat, akurat, gampang.
+          Membaca, merangkum, dan menandai masalah dalam hitungan detik,
+          memberikan tim Anda titik awal yang jelas untuk review.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
@@ -192,14 +200,19 @@ const AIAssistantLegalDocuments = () => {
       <div className="bg-gray-50 py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-8">
-            Dilatih Khusus Buat Kontrak Legal
+            Apa yang Membuatnya Berbeda
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl">
-            Ini bukan AI asal-asalan yang cuma copy-paste. AI kami dilatih
-            khusus buat ngerti bahasa legal—klausul liability, indemnity,
-            compliance requirement—semua dipahami dengan konteks. Hasilnya bukan
-            cuma ekstrak data mentah, tapi penjelasan yang bisa langsung dipakai
-            buat ambil keputusan.
+            Dibangun untuk industri legal dan yang diatur, asisten AI ini
+            membantu tim bekerja lebih cepat tanpa mengorbankan akurasi. Ini
+            membantu dengan kepatuhan tetapi tidak dapat menjaminnya, karena
+            review legal selalu memerlukan penilaian manusia.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mt-4">
+            Ini tidak menggantikan pengacara atau paralegal; ini membantu mereka
+            fokus pada keputusan bernilai tinggi sementara AI menangani analisis
+            berulang. Dokumen dapat diproses secara lokal atau dengan aman di
+            lingkungan cloud pribadi, memastikan kontrol data dan privasi.
           </p>
         </div>
       </div>
@@ -208,7 +221,7 @@ const AIAssistantLegalDocuments = () => {
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 md:mb-16">
-            Lihat Solusi Kami yang Lain
+            Karya Lainnya dari Kami
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {otherPortfolios.map((portfolio, idx) => (
@@ -253,16 +266,17 @@ const AIAssistantLegalDocuments = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-              Kenapa Habiskan Hari-hari Kalau Bisa Selesai dalam Menit?
+              Otomatiskan Review Legal Anda dengan Aman
             </h2>
           </div>
 
           <div className="flex flex-col justify-center">
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-              Firma hukum dan tim legal perusahaan besar udah pakai AI buat
-              percepat due diligence tanpa korbankan akurasi. Mereka gak
-              ngebut-ngebut review manual sambil kesepakatan nunggu. Deal gak
-              bisa nunggu. Kontrak terlalu penting buat proses yang lambat.
+              Satu klausul yang terlewat dapat merugikan jutaan. Tim legal di
+              firma terkemuka telah memotong waktu review hingga setengahnya
+              sambil menangkap lebih banyak risiko daripada sebelumnya. Dokumen
+              Anda tetap privat, kepatuhan Anda tetap utuh, dan tim Anda tetap
+              fokus pada strategi, bukan pemeriksaan silang manual.
             </p>
 
             <Link
@@ -271,7 +285,7 @@ const AIAssistantLegalDocuments = () => {
               rel="noopener noreferrer"
               className="font-light bg-[#00A0E4] hover:bg-[#3B82F6]/90 text-white py-3 md:py-4 px-6 md:px-8 text-base md:text-lg rounded-lg w-fit"
             >
-              Cobain Sekarang
+              Minta Demo Privat
             </Link>
           </div>
         </div>
