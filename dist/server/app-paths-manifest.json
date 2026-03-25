@@ -1,0 +1,7 @@
+{
+  "/[locale]/products/chat-assistly-ai/page": "app/[locale]/products/chat-assistly-ai/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/insights/page": "app/[locale]/insights/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js"
+}

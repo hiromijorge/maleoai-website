@@ -1,38 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata = {
-  title: "Maleo AI",
+  title: "Maleo AI - AI Solutions for Modern Business",
   description:
-    "Maleo AI is a leading AI consultancy from Southeast Asia, specializing in intelligent automation, AI solutions, and digital transformation. We empower businesses with cutting-edge technology, innovative strategies, and sleek, efficient solutions. Partner with us to optimize your processes and scale globally.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+    "Maleo AI helps businesses unlock their potential with cutting-edge AI solutions.",
 };
 
+// The [locale] layout provides the actual <html> and <body> elements.
+// This root layout is intentionally a passthrough per next-intl App Router setup.
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-        suppressHydrationWarning
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+  return children;
 }
