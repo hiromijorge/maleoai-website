@@ -29,7 +29,7 @@ export default function AdminNav() {
   const router = useRouter();
 
   async function handleLogout() {
-    await fetch('/api/admin/logout', { method: 'POST' });
+    await fetch('/api/admin/logout/', { method: 'POST' });
     router.push('/admin/login');
   }
 

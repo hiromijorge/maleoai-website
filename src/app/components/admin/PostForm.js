@@ -65,7 +65,7 @@ export default function PostForm({ initialData = {}, postId = null }) {
       read_time: Number(form.read_time),
     };
 
-    const url = isEdit ? `/api/admin/posts/${postId}` : '/api/admin/posts';
+    const url = isEdit ? `/api/admin/posts/${postId}/` : '/api/admin/posts/';
     const method = isEdit ? 'PUT' : 'POST';
 
     const res = await fetch(url, {

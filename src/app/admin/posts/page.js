@@ -20,7 +20,7 @@ export default function PostsPage() {
   const [deleting, setDeleting] = useState(null);
 
   async function loadPosts() {
-    const res = await fetch('/api/admin/posts');
+    const res = await fetch('/api/admin/posts/');
     if (res.ok) setPosts(await res.json());
     setLoading(false);
   }
@@ -29,7 +29,7 @@ export default function PostsPage() {
 
   async function toggleStatus(post) {
     const next = post.status === 'published' ? 'draft' : 'published';
-    await fetch(`/api/admin/posts/${post.id}`, {
+    await fetch(`/api/admin/posts/${post.id}/`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status: next }),
@@ -38,7 +38,7 @@ export default function PostsPage() {
   }
 
   async function toggleFeatured(post) {
-    await fetch(`/api/admin/posts/${post.id}`, {
+    await fetch(`/api/admin/posts/${post.id}/`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ featured: !post.featured }),
@@ -49,7 +49,7 @@ export default function PostsPage() {
   async function deletePost(id) {
     if (!confirm('Delete this post? This cannot be undone.')) return;
     setDeleting(id);
-    await fetch(`/api/admin/posts/${id}`, { method: 'DELETE' });
+    await fetch(`/api/admin/posts/${id}/`, { method: 'DELETE' });
     loadPosts();
     setDeleting(null);
   }
