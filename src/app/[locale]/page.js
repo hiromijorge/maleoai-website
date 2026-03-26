@@ -1,19 +1,23 @@
-"use client";
-
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
-import { getFeaturedPosts, formatDate } from "@/data/blogData";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getFeaturedPosts, formatDate } from "@/lib/posts";
 
-export default function Home() {
-  const t = useTranslations('home');
-  const tHero = useTranslations('hero');
-  const locale = useLocale();
+export default async function Home({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const [t, tHero, tInsights] = await Promise.all([
+    getTranslations('home'),
+    getTranslations('hero'),
+    getTranslations('insights'),
+  ]);
 
   const titleHighlight = tHero('titleHighlight');
   const titleParts = tHero('title').split(titleHighlight);
+  const featuredPosts = await getFeaturedPosts();
 
   return (
     <div className="w-full overflow-hidden">
@@ -307,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* Latest Insights Section */}
-      <FeaturedInsightsSection />
+      <FeaturedInsightsSection posts={featuredPosts} tInsights={tInsights} tHome={t} locale={locale} />
 
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
@@ -348,12 +352,8 @@ export default function Home() {
   );
 }
 
-function FeaturedInsightsSection() {
-  const t = useTranslations('insights');
-  const tHome = useTranslations('home');
-  const locale = useLocale();
-  const featuredPosts = getFeaturedPosts().slice(0, 2);
-
+function FeaturedInsightsSection({ posts, tInsights, tHome, locale }) {
+  const featuredPosts = posts.slice(0, 2);
   if (featuredPosts.length === 0) return null;
 
   return (
@@ -365,14 +365,14 @@ function FeaturedInsightsSection() {
               {tHome('blogResources')}
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">
-              {t('featured')}
+              {tInsights('featured')}
             </h2>
           </div>
           <Link
             href={`/${locale}/insights`}
             className="mt-4 md:mt-0 inline-flex items-center gap-2 text-orange-600 font-semibold hover:gap-3 transition-all"
           >
-            {t('allArticles')}
+            {tInsights('allArticles')}
             <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
@@ -409,10 +409,10 @@ function FeaturedInsightsSection() {
                     <div className="flex items-center gap-3 text-slate-500">
                       <span>{formatDate(post.publishDate)}</span>
                       <span>•</span>
-                      <span>{post.readTime} {t('readTime')}</span>
+                      <span>{post.readTime} {tInsights('readTime')}</span>
                     </div>
                     <span className="text-orange-600 font-semibold group-hover:translate-x-1 transition-transform">
-                      {t('readMore')}
+                      {tInsights('readMore')}
                     </span>
                   </div>
                 </div>
