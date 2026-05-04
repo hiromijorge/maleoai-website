@@ -2,26 +2,78 @@ import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase';
 
 export async function GET() {
-  const db = createAdminClient();
-  const { data, error } = await db
-    .from('posts')
-    .select('id, slug, title, status, featured, category, publish_date, created_at')
-    .order('created_at', { ascending: false });
+  try {
+    const db = createAdminClient();
+    const { data, error } = await db
+      .from('posts')
+      .select('id, slug, title, status, featured, category, publish_date, created_at')
+      .order('created_at', { ascending: false });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json(data);
+    if (error) {
+      console.error('GET error:', error);
+      return NextResponse.json({ error: error.message, code: error.code }, { status: 500 });
+    }
+    return NextResponse.json(data);
+  } catch (err) {
+    console.error('GET exception:', err);
+    return NextResponse.json({ 
+      error: err.message || 'Internal server error',
+      env_check: {
+        url_set: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+        key_set: !!process.env.SUPABASE_SERVICE_ROLE_KEY
+      }
+    }, { status: 500 });
+  }
 }
 
 export async function POST(request) {
-  const db = createAdminClient();
-  const body = await request.json();
+  try {
+    let body;
+    try {
+      body = await request.json();
+    } catch (e) {
+      return NextResponse.json({ error: 'Invalid JSON in request body' }, { status: 400 });
+    }
 
-  const { data, error } = await db
-    .from('posts')
-    .insert([body])
-    .select()
-    .single();
+    // Validate required fields
+    if (!body.title || !body.slug) {
+      return NextResponse.json({ error: 'Title and slug are required' }, { status: 400 });
+    }
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 400 });
-  return NextResponse.json(data, { status: 201 });
+    // Log for debugging (will show in Vercel logs)
+    console.log('POST /api/admin/posts - Starting insert:', { 
+      title: body.title, 
+      slug: body.slug
+    });
+
+    const db = createAdminClient();
+    
+    const { data, error } = await db
+      .from('posts')
+      .insert([body])
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Supabase insert error:', error);
+      return NextResponse.json({ 
+        error: error.message, 
+        code: error.code,
+        details: error.details,
+        hint: error.hint
+      }, { status: 400 });
+    }
+    
+    return NextResponse.json(data, { status: 201 });
+  } catch (err) {
+    console.error('POST exception:', err);
+    return NextResponse.json({ 
+      error: err.message || 'Internal server error',
+      type: err.name,
+      env_check: {
+        url_set: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+        key_set: !!process.env.SUPABASE_SERVICE_ROLE_KEY
+      }
+    }, { status: 500 });
+  }
 }
