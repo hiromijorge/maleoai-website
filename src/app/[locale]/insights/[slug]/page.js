@@ -1,6 +1,9 @@
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import BlogDetailClient from "./BlogDetailClient";
 
+// Revalidate every 60 seconds to show updated content quickly
+export const revalidate = 60;
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const post = await getPostBySlug(slug);

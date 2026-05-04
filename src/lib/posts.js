@@ -1,4 +1,4 @@
-import { supabase } from './supabase';
+import { createAdminClient, supabase } from './supabase';
 import { marked } from 'marked';
 
 // Configure marked for safe rendering
@@ -36,31 +36,50 @@ function mapPost(row) {
   };
 }
 
+// Use admin client for server-side data fetching
+function getDb() {
+  try {
+    return createAdminClient();
+  } catch (e) {
+    // Fallback to public client if admin credentials not available
+    return supabase;
+  }
+}
+
 export async function getAllPosts() {
-  const { data, error } = await supabase
+  const db = getDb();
+  const { data, error } = await db
     .from('posts')
     .select('*')
     .eq('status', 'published')
     .order('publish_date', { ascending: false });
 
-  if (error) { console.error('getAllPosts error:', error); return []; }
-  return data.map(mapPost);
+  if (error) { 
+    console.error('getAllPosts error:', error); 
+    return []; 
+  }
+  return (data || []).map(mapPost);
 }
 
 export async function getFeaturedPosts() {
-  const { data, error } = await supabase
+  const db = getDb();
+  const { data, error } = await db
     .from('posts')
     .select('*')
     .eq('status', 'published')
     .eq('featured', true)
     .order('publish_date', { ascending: false });
 
-  if (error) { console.error('getFeaturedPosts error:', error); return []; }
-  return data.map(mapPost);
+  if (error) { 
+    console.error('getFeaturedPosts error:', error); 
+    return []; 
+  }
+  return (data || []).map(mapPost);
 }
 
 export async function getPostBySlug(slug) {
-  const { data, error } = await supabase
+  const db = getDb();
+  const { data, error } = await db
     .from('posts')
     .select('*')
     .eq('slug', slug)
@@ -72,25 +91,30 @@ export async function getPostBySlug(slug) {
 }
 
 export async function getAllCategories() {
-  const { data } = await supabase
+  const db = getDb();
+  const { data } = await db
     .from('posts')
     .select('category')
     .eq('status', 'published');
 
   if (!data) return [];
-  return [...new Set(data.map((r) => r.category))];
+  return [...new Set(data.map((r) => r.category).filter(Boolean))];
 }
 
 export async function getPostsByCategory(category) {
-  const { data, error } = await supabase
+  const db = getDb();
+  const { data, error } = await db
     .from('posts')
     .select('*')
     .eq('status', 'published')
     .ilike('category', category)
     .order('publish_date', { ascending: false });
 
-  if (error) { console.error('getPostsByCategory error:', error); return []; }
-  return data.map(mapPost);
+  if (error) { 
+    console.error('getPostsByCategory error:', error); 
+    return []; 
+  }
+  return (data || []).map(mapPost);
 }
 
 export function formatDate(dateStr) {

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { createAdminClient } from '@/lib/supabase';
 
 export async function GET() {
@@ -62,6 +63,16 @@ export async function POST(request) {
         details: error.details,
         hint: error.hint
       }, { status: 400 });
+    }
+    
+    // Revalidate insights pages to show new posts immediately
+    try {
+      revalidatePath('/en/insights', 'page');
+      revalidatePath('/id/insights', 'page');
+      revalidatePath('/en/insights/' + data.slug, 'page');
+      revalidatePath('/id/insights/' + data.slug, 'page');
+    } catch (e) {
+      console.error('Revalidation error:', e);
     }
     
     return NextResponse.json(data, { status: 201 });

@@ -4,6 +4,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAllPosts, getFeaturedPosts, getAllCategories, formatDate } from "@/lib/posts";
 import { generateOrganizationSchema } from "@/lib/seo-utils";
 
+// Revalidate every 60 seconds to show new posts quickly
+export const revalidate = 60;
+
 export default async function InsightsPage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);

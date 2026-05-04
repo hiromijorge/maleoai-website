@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getAllPosts, getAllCategories, formatDate } from "@/lib/posts";
 
+// Revalidate every 60 seconds to show new posts quickly
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const categories = await getAllCategories();
   const locales = ['en', 'id'];
