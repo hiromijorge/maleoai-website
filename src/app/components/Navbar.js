@@ -175,32 +175,38 @@ const Navbar = () => {
                 }`}>
                   <div className="bg-white rounded-2xl shadow-2xl shadow-black/10 border border-slate-100 p-2 overflow-hidden">
                     <div className="grid grid-cols-2 gap-1">
-                      {[
-                        {
-                          name: t('aiSolutions'),
-                          href: `/${locale}/services/ai-solutions`,
-                          desc: t('aiSolutionsDesc'),
-                          icon: "🤖"
-                        },
-                        {
-                          name: t('webAppDev'),
-                          href: `/${locale}/services/web-app-development`,
-                          desc: t('webAppDevDesc'),
-                          icon: "💻"
-                        },
-                        {
-                          name: t('remoteTalent'),
-                          href: `/${locale}/services/remote-tech-talent`,
-                          desc: t('remoteTalentDesc'),
-                          icon: "🌐"
-                        },
-                        {
-                          name: t('aiTraining'),
-                          href: `/${locale}/services/ai-training`,
-                          desc: t('aiTrainingDesc'),
-                          icon: "🎓"
-                        },
-                      ].map((service) => (
+                    {[
+                      {
+                        name: t('aiSolutions'),
+                        href: `/${locale}/services/ai-solutions`,
+                        desc: t('aiSolutionsDesc'),
+                        icon: "🤖"
+                      },
+                      {
+                        name: t('geo'),
+                        href: `/${locale}/services/geo`,
+                        desc: t('geoDesc'),
+                        icon: "🔍"
+                      },
+                      {
+                        name: t('webAppDev'),
+                        href: `/${locale}/services/web-app-development`,
+                        desc: t('webAppDevDesc'),
+                        icon: "💻"
+                      },
+                      {
+                        name: t('aiTraining'),
+                        href: `/${locale}/services/ai-training`,
+                        desc: t('aiTrainingDesc'),
+                        icon: "🎓"
+                      },
+                      {
+                        name: t('remoteTalent'),
+                        href: `/${locale}/services/remote-tech-talent`,
+                        desc: t('remoteTalentDesc'),
+                        icon: "🌐"
+                      },
+                    ].map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -426,9 +432,10 @@ const Navbar = () => {
                   <div className="pl-4 space-y-1">
                     {[
                       { name: t('aiSolutions'), href: `/${locale}/services/ai-solutions` },
+                      { name: t('geo'), href: `/${locale}/services/geo` },
                       { name: t('webAppDev'), href: `/${locale}/services/web-app-development` },
-                      { name: t('remoteTalent'), href: `/${locale}/services/remote-tech-talent` },
                       { name: t('aiTraining'), href: `/${locale}/services/ai-training` },
+                      { name: t('remoteTalent'), href: `/${locale}/services/remote-tech-talent` },
                     ].map((service) => (
                       <Link
                         key={service.name}

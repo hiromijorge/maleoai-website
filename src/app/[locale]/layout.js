@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -37,6 +38,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} className={plusJakartaSans.variable} suppressHydrationWarning>
       <body className={`${plusJakartaSans.className} antialiased`} suppressHydrationWarning>
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar />
           <main className="min-h-screen">{children}</main>

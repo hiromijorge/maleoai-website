@@ -15,12 +15,14 @@ const About = async ({ params }) => {
     { icon: "/assets/restaurant-ico.png", title: t('exp2Title'), description: t('exp2Desc') },
     { icon: "/assets/real_estate_agent-ico.png", title: t('exp3Title'), description: t('exp3Desc') },
     { icon: "/assets/real_estate_agent-ico.png", title: t('exp4Title'), description: t('exp4Desc') },
+    { icon: "/assets/store-ico.png", title: t('exp5Title'), description: t('exp5Desc') },
   ];
 
   const teamMembers = [
     { name: t('member1Name'), title: t('member1Title'), description: t('member1Desc') },
     { name: t('member2Name'), title: t('member2Title'), description: t('member2Desc') },
     { name: t('member3Name'), title: t('member3Title'), description: t('member3Desc') },
+    { name: t('member4Name'), title: t('member4Title'), description: t('member4Desc') },
   ];
 
   return (
@@ -43,7 +45,7 @@ const About = async ({ params }) => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 lg:mb-16 text-center">
           {t('ourExpertise')}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           {expertiseItems.map((item, index) => (
             <div key={index} className="text-start bg-[#F8F8F8] p-8 rounded-lg">
               <div className="mb-6">
@@ -63,7 +65,7 @@ const About = async ({ params }) => {
           {t('meetOurTeam')}
         </h2>
         <h3 className="text-xl md:text-2xl font-medium mb-8 md:mb-12 text-center">{t('techTeam')}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-start">
               <h4 className="text-xl font-semibold mb-2 text-[#FF6B2C]">{member.name}</h4>

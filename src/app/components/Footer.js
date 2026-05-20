@@ -19,9 +19,10 @@ const Footer = () => {
 
   const serviceItems = [
     { nameKey: "svcAI", path: `/${locale}/services/ai-solutions` },
+    { nameKey: "svcGEO", path: `/${locale}/services/geo` },
     { nameKey: "svcWeb", path: `/${locale}/services/web-app-development` },
-    { nameKey: "svcTalent", path: `/${locale}/services/remote-tech-talent` },
     { nameKey: "svcTraining", path: `/${locale}/services/ai-training` },
+    { nameKey: "svcTalent", path: `/${locale}/services/remote-tech-talent` },
   ];
 
   const socialLinks = [
