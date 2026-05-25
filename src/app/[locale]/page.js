@@ -251,11 +251,13 @@ export default function Home() {
               { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
               { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
               { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
+              { name: 'Atumcell', logo: '/assets/companies/Atumcell.png' },
               { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg' },
               { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg' },
               { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
               { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
               { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
+              { name: 'Atumcell', logo: '/assets/companies/Atumcell.png' },
             ].map((client, idx) => (
               <div key={idx} className="flex-shrink-0 mx-4 w-48 md:w-56 h-24 relative bg-white rounded-xl shadow-sm">
                 <Image
