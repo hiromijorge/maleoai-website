@@ -61,7 +61,7 @@ export default function Home() {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="relative z-10 max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8 pt-20">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in-up">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -231,22 +231,40 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white">{t('clientsTitle')}</h2>
           </div>
+        </div>
 
-          {/* Client Logos Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        {/* Client Logos Marquee */}
+        <div className="relative w-full">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
+
+          <div className="flex animate-marquee">
             {[
-              { name: 'Cork Protocol', logo: '/assets/companies/cork-protocol.png' },
-              { name: 'MapTrack', logo: '/assets/companies/maptrack.png' },
+              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg' },
+              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg' },
               { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
               { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
+              { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
+              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg' },
+              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg' },
+              { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
+              { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
+              { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
             ].map((client, idx) => (
-              <div key={idx} className="flex items-center justify-center p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                <div className="text-white/60 font-semibold text-lg">{client.name}</div>
+              <div key={idx} className="flex-shrink-0 mx-4 w-48 md:w-56 h-24 relative bg-white rounded-xl shadow-sm">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  className="object-contain p-4"
+                  sizes="224px"
+                />
               </div>
             ))}
           </div>
@@ -373,8 +391,14 @@ export default function Home() {
             {/* Testimonial 1 */}
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-500">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  LM
+                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/assets/clients/Lachlan McRitchie - Maptrack Australia.jpg"
+                    alt="Lachlan McRitchie"
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">{t('testimonial1Name')}</h4>
@@ -390,8 +414,14 @@ export default function Home() {
             {/* Testimonial 2 */}
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-500">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  DS
+                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/assets/clients/David Stancel - Cork Protocol.jpg"
+                    alt="David Stancel"
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">{t('testimonial2Name')}</h4>
