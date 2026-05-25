@@ -419,8 +419,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Article Recommendation Section */}
       <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-orange-600 font-semibold text-sm uppercase tracking-wider">{t('articleRecTag')}</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-4">
+              {t('articleRecTitle')}
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
+              {t('articleRecSubtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Article 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                {t('article1Title')}
+              </h3>
+              <Link
+                href={`/${locale}/insights/byteplus-startup-connect-bali`}
+                className="inline-flex items-center text-orange-600 font-semibold hover:gap-3 transition-all gap-2"
+              >
+                {t('readMore')}
+                <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Article 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                {t('article2Title')}
+              </h3>
+              <Link
+                href={`/${locale}/insights/ai-implementation-companies-strategic-approach`}
+                className="inline-flex items-center text-orange-600 font-semibold hover:gap-3 transition-all gap-2"
+              >
+                {t('readMore')}
+                <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href={`/${locale}/insights`}
+              className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:gap-3 transition-all"
+            >
+              {t('exploreAllInsights')}
+              <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-700 text-sm font-semibold rounded-full mb-4">

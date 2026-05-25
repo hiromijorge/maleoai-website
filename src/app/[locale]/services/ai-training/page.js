@@ -138,11 +138,11 @@ const AITraining = async ({ params }) => {
           </h2>
           <div className="max-w-5xl mx-auto">
             <div className="space-y-8">
-              {/* 3 Months */}
+              {/* 0-3 Months */}
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0 w-24 md:w-32">
-                  <div className="bg-orange-500 text-white font-bold px-4 py-2 rounded-lg text-center">
-                    3 Months
+                  <div className="bg-orange-500 text-white font-bold px-4 py-2 rounded-lg text-center text-sm">
+                    0-3 mo
                   </div>
                 </div>
                 <div className="flex-1 bg-slate-50 rounded-xl p-6">
@@ -154,8 +154,8 @@ const AITraining = async ({ params }) => {
               {/* 3-6 Months */}
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0 w-24 md:w-32">
-                  <div className="bg-blue-500 text-white font-bold px-4 py-2 rounded-lg text-center">
-                    3-6 Months
+                  <div className="bg-blue-500 text-white font-bold px-4 py-2 rounded-lg text-center text-sm">
+                    3-6 mo
                   </div>
                 </div>
                 <div className="flex-1 bg-slate-50 rounded-xl p-6">
@@ -167,8 +167,8 @@ const AITraining = async ({ params }) => {
               {/* 6+ Months */}
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0 w-24 md:w-32">
-                  <div className="bg-green-500 text-white font-bold px-4 py-2 rounded-lg text-center">
-                    6+ Months
+                  <div className="bg-green-500 text-white font-bold px-4 py-2 rounded-lg text-center text-sm">
+                    6+ mo
                   </div>
                 </div>
                 <div className="flex-1 bg-slate-50 rounded-xl p-6">
@@ -184,9 +184,12 @@ const AITraining = async ({ params }) => {
       {/* Case Studies */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
-            Real Implementations
-          </h2>
+          <div className="text-center mb-12">
+            <span className="text-orange-400 font-semibold text-sm uppercase tracking-wider">Real Implementations</span>
+            <h2 className="text-3xl md:text-4xl font-semibold mt-2">
+              Case studies
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { key: 'caseStudy1' },
@@ -198,30 +201,6 @@ const AITraining = async ({ params }) => {
                 <p className="text-slate-300 text-sm">{t(`${item.key}Desc`)}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Good Fit Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
-            {t('goodFitTitle')}
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <ul className="space-y-4">
-              {[
-                t('goodFit1'),
-                t('goodFit2'),
-                t('goodFit3'),
-                t('goodFit4'),
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm">✓</span>
-                  <span className="text-slate-700">{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -238,6 +217,8 @@ const AITraining = async ({ params }) => {
               { q: 'faq2Q', a: 'faq2A' },
               { q: 'faq3Q', a: 'faq3A' },
               { q: 'faq4Q', a: 'faq4A' },
+              { q: 'faq5Q', a: 'faq5A' },
+              { q: 'faq6Q', a: 'faq6A' },
             ].map((faq, idx) => (
               <details key={idx} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
@@ -257,9 +238,24 @@ const AITraining = async ({ params }) => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Free Consultation Section */}
       <section className="py-16 bg-gradient-to-br from-orange-500 via-orange-600 to-red-600">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            {t('freeConsultTitle')}
+          </h2>
+          <p className="text-white/90 text-lg mb-8">
+            {t('freeConsultDesc')}
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-left mb-8">
+            <p className="text-white font-medium mb-4">{t('freeConsultContact')}</p>
+            <ul className="space-y-2 text-white/90">
+              <li>{t('freeConsultForm')}</li>
+              <li>{t('freeConsultEmail')}</li>
+              <li>{t('freeConsultWhatsapp')}</li>
+            </ul>
+            <p className="text-white/80 text-sm mt-4">{t('freeConsultResponse')}</p>
+          </div>
           <Link
             href={`/${locale}/contact`}
             className="inline-block bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1"
