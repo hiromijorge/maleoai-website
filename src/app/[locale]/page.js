@@ -244,29 +244,39 @@ export default function Home() {
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
 
-          <div className="flex animate-marquee">
+          <div className="flex animate-marquee will-change-transform">
             {[
-              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg' },
-              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg' },
+              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg', country: 'United States', flag: '🇺🇸' },
+              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg', country: 'Australia', flag: '🇦🇺' },
               { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
               { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
               { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
               { name: 'Atumcell', logo: '/assets/companies/Atumcell.png' },
-              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg' },
-              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg' },
+              { name: 'Cork Protocol', logo: '/assets/companies/Cork.jpeg', country: 'United States', flag: '🇺🇸' },
+              { name: 'MapTrack', logo: '/assets/companies/MapTrack.jpeg', country: 'Australia', flag: '🇦🇺' },
               { name: 'Syncorp AI', logo: '/assets/companies/Syncorp.svg' },
               { name: 'Training Notebook', logo: '/assets/companies/TTN.svg' },
               { name: 'WangDataMarket', logo: '/assets/companies/WangDataMarket.svg' },
               { name: 'Atumcell', logo: '/assets/companies/Atumcell.png' },
             ].map((client, idx) => (
-              <div key={idx} className="flex-shrink-0 mx-4 w-48 md:w-56 h-24 relative bg-white rounded-xl shadow-sm">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  className="object-contain p-4"
-                  sizes="224px"
-                />
+              <div key={idx} className="flex-shrink-0 mx-4 w-48 md:w-56 h-28 relative bg-white rounded-xl shadow-sm flex flex-col items-center justify-center p-3">
+                {client.flag && (
+                  <span className="absolute top-2 right-2 text-base leading-none" title={client.country}>
+                    {client.flag}
+                  </span>
+                )}
+                <div className="relative w-full h-14">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    className="object-contain p-2"
+                    sizes="224px"
+                  />
+                </div>
+                <p className="text-xs font-semibold text-slate-700 mt-1 truncate w-full text-center px-2">
+                  {client.name}
+                </p>
               </div>
             ))}
           </div>
